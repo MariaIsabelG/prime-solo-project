@@ -19,8 +19,10 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import TeacherHome from '../TeacherHome/TeacherHome';
 
 import './App.css';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -53,11 +55,11 @@ function App() {
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
           <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
+            // logged in shows TeacherHome else shows LoginPage
             exact
-            path="/user"
+            path="/teacher-home"
           >
-            <UserPage />
+            <TeacherHome />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -74,41 +76,27 @@ function App() {
           >
             {user.id ?
               // If the user is already logged in, 
-              // redirect to the /user page
-              <Redirect to="/user" />
+              // redirect to the /teacher-home page
+              <Redirect to="/teacher-home" />
               :
               // Otherwise, show the login page
               <LoginPage />
             }
           </Route>
 
-          <Route
+          {/* <Route
             exact
             path="/registration"
           >
             {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/registration" />
               :
               // Otherwise, show the Login page
               <RegisterPage />
             }
-          </Route>
-
-          <Route
-            exact
-            path="/home"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the Login page
-              <LoginPage />
-            }
-          </Route>
+          </Route> */}
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
@@ -122,3 +110,5 @@ function App() {
 }
 
 export default App;
+
+// LEFT OFF ---- After logging in, the app does not go to the teacher-home page
