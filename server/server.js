@@ -8,6 +8,7 @@ const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
 
 // Route includes
+const statesRouter = require('./routes/states.router');
 const studentsRouter = require('./routes/students.router');
 const userRouter = require('./routes/user.router');
 const { application } = require('express');
@@ -26,6 +27,7 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/api/students', studentsRouter);
+app.use('/api/states', statesRouter);
 
 // Serve static files
 app.use(express.static('build'));
