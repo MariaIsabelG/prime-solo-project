@@ -8,6 +8,7 @@ const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
 
 // Route includes
+const studentRouter = require('./routes/student.router');
 const userRouter = require('./routes/user.router');
 const { application } = require('express');
 

@@ -2,21 +2,22 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
+
 /**
  * GET route template
  */
 router.get('/', (req, res) => {
   // GET route code here
-  if( req.isAuthenticated() ){
   const access = 2;  
-  const queryText = `SELECT * FROM "user" WHERE "access_level = $1`;
+  const queryText = `SELECT * FROM "user" WHERE "access_level" = $1`;
   pool.query( queryText, [access] )
-    .then((results) => res.send(results.rows))
-    .catch((error) => {
+  .then ( result =>{
+    res.send( result.rows );
+    console.log( result.rows ); 
+    }).catch((error) => {
       console.log('Error getting students:', error);
       res.sendStatus(500);
     });
-  }
 });
 
 /**

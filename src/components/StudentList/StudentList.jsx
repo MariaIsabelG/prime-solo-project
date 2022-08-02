@@ -6,8 +6,7 @@ import StudentItem from '../StudentItem/StudentItem';
 function StudentList (){
 
         const dispatch = useDispatch();
-        const students = useSelector ( store => store.userReducer);
-
+        const students = useSelector ( (store) => store.userReducer);
 
     useEffect(() => { 
         dispatch({
@@ -27,12 +26,12 @@ function StudentList (){
                     </tr>
                 </thead>
                 <tbody>
-                    {students.map((student) =>{
-                        return (
-                            <StudentItem key={student.id} student={student}/>
+                    {/* {students.map((student) =>{
+                        return(
+                        <StudentItem key={student.id} student={student}/>
                         )
                     })
-                }
+                } */}
                 </tbody>
             </table>
         </div>
