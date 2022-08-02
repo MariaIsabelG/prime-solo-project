@@ -14,11 +14,11 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
+//import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
-import LandingPage from '../LandingPage/LandingPage';
+//import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
+// import RegisterPage from '../RegisterPage/RegisterPage';
 import TeacherHome from '../TeacherHome/TeacherHome';
 
 import './App.css';
@@ -57,7 +57,7 @@ function App() {
           <ProtectedRoute
             // logged in shows TeacherHome else shows LoginPage
             exact
-            path="/teacher-home"
+            path="/teacherhome"
           >
             <TeacherHome />
           </ProtectedRoute>
@@ -77,26 +77,13 @@ function App() {
             {user.id ?
               // If the user is already logged in, 
               // redirect to the /teacher-home page
-              <Redirect to="/teacher-home" />
+              <Redirect to="/teacherhome" />
               :
               // Otherwise, show the login page
               <LoginPage />
             }
           </Route>
 
-          {/* <Route
-            exact
-            path="/registration"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/registration" />
-              :
-              // Otherwise, show the Login page
-              <RegisterPage />
-            }
-          </Route> */}
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
