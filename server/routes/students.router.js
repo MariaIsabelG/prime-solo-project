@@ -11,9 +11,9 @@ router.get('/', (req, res) => {
   const access = 2;  
   const queryText = `SELECT * FROM "user" WHERE "access_level" = $1`;
   pool.query( queryText, [access] )
-  .then ( result =>{
-    res.send( result.rows );
-    console.log( result.rows ); 
+  .then ( response =>{
+    res.send( response.rows );
+    console.log( response.rows ); 
     }).catch((error) => {
       console.log('Error getting students:', error);
       res.sendStatus(500);

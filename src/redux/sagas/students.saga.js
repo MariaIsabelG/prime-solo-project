@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* fetchStudents(){
     try{
-        const response = yield axios.get('/api/user');
+        const response = yield axios.get('/api/students');
         yield put({ type: 'SET_STUDENTS', payload: response.data });
         console.log('These are the students:', response.data)
     }catch(error) {
