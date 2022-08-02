@@ -2,6 +2,7 @@
 import { useSelector } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import AddStudent from '../AddStudent/AddStudent';
+import StudentList from '../StudentList/StudentList';
 
 function TeacherHome(){
 
@@ -12,6 +13,7 @@ function TeacherHome(){
         <h2>Welcome, {user.username}!</h2>
         
         <AddStudent/>
+        <StudentList/>
         
         <LogOutButton className="btn" />
       </div>
