@@ -8,7 +8,7 @@ function StudentList (){
 
     return (
 
-        <div>
+        <div className="grey-div">
             <table>
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@ function StudentList (){
                 <tbody>
                     <tr>
                         <td>
-                            Juanito
+                            StudentItem
                         </td>
                         <td>button and button </td>
                     </tr>

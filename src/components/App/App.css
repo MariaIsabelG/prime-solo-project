@@ -110,8 +110,9 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
-.add-student {
+.grey-div {
   background-color: gainsboro;
+  margin: 10px;
 
 }
 
