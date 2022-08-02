@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function RegisterForm() {
   const [fullName, setFullName] = useState( '' );
@@ -10,6 +11,7 @@ function RegisterForm() {
 
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const registerUser = (event) => {
     event.preventDefault();
@@ -24,6 +26,9 @@ function RegisterForm() {
         access: access
       },
     });
+    alert( 'Registraition completed');
+    history.push('/teacherhome')
+
   }; // end registerUser
 
   return (
@@ -43,7 +48,7 @@ function RegisterForm() {
             value={fullName}
             required
             onChange={(event) => setFullName(event.target.value)}
-          />
+            require='true'/>
         </label>
       </div>
       <div>
@@ -55,7 +60,7 @@ function RegisterForm() {
             value={username}
             required
             onChange={(event) => setUsername(event.target.value)}
-          />
+            require='true'/>
         </label>
       </div>
       <div>
@@ -67,7 +72,7 @@ function RegisterForm() {
             value={password}
             required
             onChange={(event) => setPassword(event.target.value)}
-          />
+            require='true'/>
         </label>
       </div>
       <div>
@@ -92,7 +97,7 @@ function RegisterForm() {
             value='2'
             required
             onChange={(event) => setAccess(event.target.value)}
-          />
+            />
           <label htmlFor="access">Teacher</label>
           <input
             type="radio"

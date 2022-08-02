@@ -1,10 +1,20 @@
-
-
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import StudentItem from '../StudentItem/StudentItem';
 
 
 function StudentList (){
 
+        const dispatch = useDispatch();
+        const students = useSelector ( store => store.userReducer);
 
+
+    useEffect(() => { 
+        dispatch({
+            type: 'FETCH_STUDENTS'
+        })
+        
+    },[])
 
     return (
 
@@ -17,13 +27,12 @@ function StudentList (){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            StudentItem
-                        </td>
-                        <td>button and button </td>
-                    </tr>
-
+                    {students.map((student) =>{
+                        return (
+                            <StudentItem key={student.id} student={student}/>
+                        )
+                    })
+                }
                 </tbody>
             </table>
         </div>
