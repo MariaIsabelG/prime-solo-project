@@ -2,10 +2,12 @@
 
 function EmotionsItem ({emotion}){
 
+    console.log('This is an emotion:', emotion);
+
     return (
-        <div>
+        <span>
             <button>{emotion.emotion_name}</button>
-        </div>
+        </span>
     )
 
 };
