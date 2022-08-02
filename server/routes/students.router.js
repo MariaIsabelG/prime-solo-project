@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   const access = 2;  
-  const queryText = `SELECT * FROM "user" WHERE "access_level" = $1`;
+  const queryText = `SELECT id, full_name, username, considerations FROM "user" WHERE "access_level" = $1`;
   pool.query( queryText, [access] )
   .then ( response =>{
     res.send( response.rows );

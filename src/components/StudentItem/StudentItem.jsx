@@ -1,15 +1,13 @@
+
+
 function StudentItem ({student}){
 
     return (
 
-        <tr>
-            <td>
-                <p>{student.full_name}</p>
-            </td>
+        <tr key={student.id}>
+            <td>{student.full_name}</td>
             <td>
                 <button>View</button>
-            </td>
-            <td>
                 <button>Edit</button>
             </td>
         </tr>
