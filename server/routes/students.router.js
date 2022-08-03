@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   const access = 2;  
-  const queryText = `SELECT id, full_name, username, considerations FROM "user" WHERE "access_level" = $1`;
+  const queryText = `SELECT id, full_name, username, considerations FROM "user" WHERE "access_level" = $1 ORDER BY full_name ASC`;
   pool.query( queryText, [access] )
   .then ( response =>{
     res.send( response.rows );
@@ -30,9 +30,10 @@ router.post('/', (req, res) => {
 router.put('/edit/:id', (req, res) => {
   // Update this single student
   const id = req.params.id;
-  const name = req.params.full_name;
-  const username = req.params.username;
-  const considerations = req.params.considerations;
+  const name = req.body.full_name;
+  const username = req.body.username;
+  const considerations = req.body.considerations;
+  console.log( 'This is params:',req.body);
   const sqlText = `UPDATE "user" SET full_name = $1, username = $2, considerations = $3 WHERE id = $4`;
   pool.query(sqlText, [name, username, considerations, id])
       .then((result) => {

@@ -19,8 +19,8 @@ function EditForm() {
         event.preventDefault();
 
         dispatch({ 
-            type: 'UPDATE_STUDENT',
-            payload: student,
+            type: 'EDIT_STUDENT',
+            payload: student
     })
     console.log( 'This is the updated student:', student)
     };
