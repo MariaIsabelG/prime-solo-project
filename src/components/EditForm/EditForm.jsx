@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-
+import { useHistory } from 'react-router-dom';
 
 function EditForm() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const student = useSelector( (store) => store.edit);
 
@@ -22,7 +23,7 @@ function EditForm() {
             type: 'EDIT_STUDENT',
             payload: student
     })
-    console.log( 'This is the updated student:', student)
+        history.push('/teacherhome');
     };
 
         return (
@@ -51,7 +52,7 @@ function EditForm() {
                         /></label><br/>
                         <input type='submit' value='Update Student' />
                     </form>
-                        <button>Delete student</button>
+                    <DeleteStudent />
                     
                 </>
                 );
