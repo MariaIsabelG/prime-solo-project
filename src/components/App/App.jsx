@@ -22,6 +22,7 @@ import TeacherHome from '../TeacherHome/TeacherHome';
 import EditForm from '../EditForm/EditForm';
 import StudentLanding from '../StudentLanding/StudentLanding';
 import Breathing from '../Breathing/Breathing';
+import EmotionsView from '../EmotionsView/EmotionsView';
 
 import './App.css';
 
@@ -102,6 +103,14 @@ function App() {
             path="/breathing"
           >
             <Breathing />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/emotions"
+          >
+            <EmotionsView />
           </ProtectedRoute>
           
 
