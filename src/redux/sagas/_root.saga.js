@@ -6,6 +6,7 @@ import studentsSaga from './students.saga';
 import emotionsSaga from './emotions.saga';
 import sensationsSaga from './sensations.saga';
 import editSaga from './edit.saga';
+import deleteSaga from './delete.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -23,5 +24,6 @@ export default function* rootSaga() {
     emotionsSaga(), 
     sensationsSaga(),
     editSaga(),
+    deleteSaga(),
   ]);
 }

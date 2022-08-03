@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import DeleteStudent from '../DeleteStudent/DeleteStudent';
 
 function EditForm() {
 
@@ -52,7 +53,7 @@ function EditForm() {
                         /></label><br/>
                         <input type='submit' value='Update Student' />
                     </form>
-                    <DeleteStudent />
+                    <DeleteStudent id={student.id} />
                     
                 </>
                 );
