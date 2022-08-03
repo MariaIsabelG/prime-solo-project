@@ -115,5 +115,9 @@ input {
   margin: 10px;
 
 }
+.breathing{
+  pointer-events: none;
+  border-radius: 200px;
+}
 
 

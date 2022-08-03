@@ -16,11 +16,11 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
 //import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
-// import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import TeacherHome from '../TeacherHome/TeacherHome';
 import EditForm from '../EditForm/EditForm';
+import StudentLanding from '../StudentLanding/StudentLanding';
 
 import './App.css';
 
@@ -87,6 +87,13 @@ function App() {
             <EditForm />
           </ProtectedRoute>
 
+          <ProtectedRoute
+            // logged in shows TeacherHome else shows LoginPage
+            exact
+            path="/studentlanding"
+          >
+            <StudentLanding />
+          </ProtectedRoute>
           
 
           {/* <Route
