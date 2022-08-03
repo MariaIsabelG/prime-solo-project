@@ -19,6 +19,9 @@ function EmotionsView (){
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
+            <div>   
+                <button>Next</button>
+            </div> 
         </div>
     )
 

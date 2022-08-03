@@ -3,9 +3,11 @@
 function EmotionsViewItem ({emotion}){
 
     return (
+        <>
         <span>
-            <button>{emotion.emotion_name}</button>
+            <button value={emotion.emotion_value}>{emotion.emotion_name}</button>
         </span>
+        </>
     )
 
 };
