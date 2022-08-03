@@ -1,6 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 function EditForm() {
+
+    const dispatch = useDispatch();
 
     const student = useSelector( (store) => store.edit);
 
@@ -12,14 +15,22 @@ function EditForm() {
         })
     }
 
-    function handleSubmit
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        dispatch({ 
+            type: 'UPDATE_STUDENT',
+            payload: student,
+    })
+    console.log( 'This is the updated student:', student)
+    };
 
         return (
 
                 <>
                     <h2>Edit Student</h2>
                     <p>We are editing this student: {student.full_name} with id: {student.id}</p>
-                    <form >
+                    <form onSubmit={handleSubmit}>
                         <label>Student Name:
                         <input
                         onChange={(event) => handleChange(event, 'full_name')}
@@ -37,13 +48,13 @@ function EditForm() {
                         onChange={(event) => handleChange(event, 'considerations')}
                         placeholder='Considerations'
                         value={student.considerations}
-                        /></label>
+                        /></label><br/>
                         <input type='submit' value='Update Student' />
                     </form>
+                        <button>Delete student</button>
+                    
                 </>
                 );
 };
 
 export default EditForm;
-
-// onSubmit={handleSubmit}

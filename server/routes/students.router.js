@@ -27,4 +27,21 @@ router.post('/', (req, res) => {
   // POST route code here
 });
 
+router.put('/edit/:id', (req, res) => {
+  // Update this single student
+  const id = req.params.id;
+  const name = req.params.full_name;
+  const username = req.params.username;
+  const considerations = req.params.considerations;
+  const sqlText = `UPDATE "user" SET full_name = $1, username = $2, considerations = $3 WHERE id = $4`;
+  pool.query(sqlText, [name, username, considerations, id])
+      .then((result) => {
+          res.sendStatus(200);
+      })
+      .catch((error) => {
+          console.log(`Error making database query ${sqlText}`, error);
+          res.sendStatus(500);
+      });
+});
+
 module.exports = router;

@@ -5,7 +5,13 @@ const editStudent = (state = {}, action) => {
             return action.payload;
     
         case 'EDIT_ONCHANGE':
-            return 
+            return {
+                ...state,
+                [action.payload.property] : action.payload.value
+            }
+        
+        case 'EDIT_CLEAR':
+            return { id:'', full_name: '', username: '', considerations: '' };
         
         default:
         return state;
