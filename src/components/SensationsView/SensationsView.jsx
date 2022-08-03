@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SensationsViewItem from '../SensationsViewItem/SensationsViewItem';
 import { useEffect } from 'react';
 
-function EmotionsView (){
+function SensationsView (){
 
     const dispatch = useDispatch();
     const sensations = useSelector( store => store.sensations);
@@ -15,9 +15,9 @@ function EmotionsView (){
 
     return (
         <div>
-            <h3>What emotion are you feeling at this moment?</h3>
+            <h3>What sensation can you recognize at this moment?</h3>
                 {sensations.map((sensation) => {
-                    return <SensationViewItem key={sensation.id} sensation={sensation} />
+                    return <SensationsViewItem key={sensation.id} sensation={sensation} />
                 })}
             <div>   
                 <button>Next</button>
@@ -27,4 +27,4 @@ function EmotionsView (){
 
 };
 
-export default EmotionsView;
+export default SensationsView;
