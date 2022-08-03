@@ -117,6 +117,10 @@ input {
 }
 .breathing{
   pointer-events: none;
+  border-radius: 50px;
+}
+.welcome{
+  pointer-events: none;
   border-radius: 200px;
 }
 
