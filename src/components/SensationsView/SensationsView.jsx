@@ -1,17 +1,24 @@
 import { useDispatch, useSelector } from 'react-redux';
 import SensationsViewItem from '../SensationsViewItem/SensationsViewItem';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function SensationsView (){
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const sensations = useSelector( store => store.sensations);
 
     useEffect(() => { 
-        dispatch({
-            type: 'FETCH_SENSATIONS'
-        })
+       
+            dispatch({
+                type: 'FETCH_SENSATIONS'
+            })
     },[])
+
+    function handleNext() {
+        history.push('/review')
+    };
 
     return (
         <div>
@@ -20,7 +27,7 @@ function SensationsView (){
                     return <SensationsViewItem key={sensation.id} sensation={sensation} />
                 })}
             <div>   
-                <button>Next</button>
+                <button onClick={handleNext}>Next</button>
             </div> 
         </div>
     )

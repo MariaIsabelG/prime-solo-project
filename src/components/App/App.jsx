@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import {
   HashRouter as Router,
@@ -6,13 +7,10 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
-
+import './App.css';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
 import AboutPage from '../AboutPage/AboutPage';
 //import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -24,9 +22,7 @@ import StudentLanding from '../StudentLanding/StudentLanding';
 import Breathing from '../Breathing/Breathing';
 import EmotionsView from '../EmotionsView/EmotionsView';
 import SensationsView from '../SensationsView/SensationsView';
-
-import './App.css';
-
+import Review from '../Review/Review';
 
 function App() {
   const dispatch = useDispatch();
@@ -120,6 +116,14 @@ function App() {
             path="/sensations"
           >
             <SensationsView />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/review"
+          >
+            <Review />
           </ProtectedRoute>
           
 
