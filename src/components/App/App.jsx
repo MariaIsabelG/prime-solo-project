@@ -21,6 +21,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import TeacherHome from '../TeacherHome/TeacherHome';
 import EditForm from '../EditForm/EditForm';
 import StudentLanding from '../StudentLanding/StudentLanding';
+import Breathing from '../Breathing/Breathing';
 
 import './App.css';
 
@@ -93,6 +94,14 @@ function App() {
             path="/studentlanding"
           >
             <StudentLanding />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows TeacherHome else shows LoginPage
+            exact
+            path="/breathing"
+          >
+            <Breathing />
           </ProtectedRoute>
           
 
