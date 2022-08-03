@@ -2,6 +2,8 @@
 
 function EmotionsViewItem ({emotion}){
 
+
+
     return (
         <>
         <span>
