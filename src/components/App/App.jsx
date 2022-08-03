@@ -151,4 +151,3 @@ function App() {
 
 export default App;
 
-// LEFT OFF ---- After logging in, the app does not go to the teacher-home page
