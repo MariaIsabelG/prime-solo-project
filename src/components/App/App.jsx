@@ -20,6 +20,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import TeacherHome from '../TeacherHome/TeacherHome';
+import EditForm from '../EditForm/EditForm';
 
 import './App.css';
 
@@ -78,20 +79,16 @@ function App() {
             <RegisterPage />
           </ProtectedRoute>
 
-          <Route
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
             exact
-            path="/login"
+            path="/edit"
           >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect to the /teacher-home page
-              <Redirect to="/registration" />
-              :
-              // Otherwise, show the login page
-              <LoginPage />
-            }
-          </Route>
+            <EditForm />
+          </ProtectedRoute>
 
+          
+{/* 
           <Route
             exact
             path="/login"
@@ -104,7 +101,7 @@ function App() {
               // Otherwise, show the login page
               <LoginPage />
             }
-          </Route>
+          </Route> */}
 
 
           {/* If none of the other routes matched, we will show a 404. */}

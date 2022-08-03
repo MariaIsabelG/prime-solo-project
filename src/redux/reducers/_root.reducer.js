@@ -4,6 +4,7 @@ import user from './user.reducer';
 import students from './students.reducer';
 import emotions from './emotions.reducer';
 import sensations from './sensations.reducer';
+import edit from './edit.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   students,
   emotions,
   sensations,
+  edit,
 });
 
 export default rootReducer;

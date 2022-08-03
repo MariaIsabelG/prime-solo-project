@@ -1,6 +1,21 @@
-
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function StudentItem ({student}){
+
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+
+
+    const handleEdit = () => {
+
+        dispatch({
+            type: 'SET_EDIT_STUDENT',
+            payload: student
+        })
+        history.push('/edit');
+    }
 
     return (
 
@@ -8,7 +23,7 @@ function StudentItem ({student}){
             <td>{student.full_name}</td>
             <td>
                 <button>View</button>
-                <button>Edit</button>
+                <button onClick={handleEdit}>Edit</button>
             </td>
         </tr>
     )
