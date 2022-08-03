@@ -15,6 +15,7 @@ function StudentItem ({student}){
             payload: student
         })
         history.push('/edit');
+        console.log( 'This is student in studentitem:', student );
     }
 
     return (
