@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* fetchEmotions(){
     try{
-        const response = yield axios.get('/api/states');
+        const response = yield axios.get('/api/states/emotions');
         yield put({ type: 'SET_EMOTIONS', payload: response.data });
     }catch(error) {
         console.log('Error in getting emotions:', error);

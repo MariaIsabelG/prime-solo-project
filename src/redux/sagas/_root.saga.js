@@ -20,6 +20,6 @@ export default function* rootSaga() {
     userSaga(),
     studentsSaga(),
     emotionsSaga(), 
-    sensations.saga(),
+    sensationsSaga(),
   ]);
 }

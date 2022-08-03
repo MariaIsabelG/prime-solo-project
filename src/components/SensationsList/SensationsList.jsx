@@ -15,9 +15,9 @@ function SensationsList (){
 
     return (
         <div className="grey-div">
-            <h3>Sensastions available:</h3>
+            <h3>Sensations available:</h3>
                 {sensations.map((sensation) => {
-                    return <SensationsItem key={sensation.id} emotion={sensation} />
+                    return <SensationsItem key={sensation.id} sensation={sensation} />
                 })}
         </div>
     )

@@ -4,6 +4,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import AddStudent from '../AddStudent/AddStudent';
 import StudentList from '../StudentList/StudentList';
 import EmotionsList from '../EmotionsList/EmotionsList';
+import SensationsList from '../SensationsList/SensationsList';
 
 function TeacherHome(){
 
@@ -16,6 +17,7 @@ function TeacherHome(){
         <AddStudent/>
         <StudentList/>
         <EmotionsList/>
+        <SensationsList/>
         
         <LogOutButton className="btn" />
       </div>
