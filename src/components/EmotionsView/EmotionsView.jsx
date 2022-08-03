@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import EmotionsItem from '../EmotionsItem/EmotionsItem';
+import EmotionsViewItem from '../EmotionsViewItem/EmotionsViewItem';
 import { useEffect } from 'react';
 
 function EmotionsView (){
@@ -14,10 +14,10 @@ function EmotionsView (){
     },[])
 
     return (
-        <div className="grey-div">
+        <div>
             <h3>What emotion are you feeling at this moment?</h3>
                 {emotions.map((emotion) => {
-                    return <EmotionsItem key={emotion.id} emotion={emotion} />
+                    return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
         </div>
     )
