@@ -1,17 +1,17 @@
 
 
-function EmotionsViewItem ({emotion}){
+function SensationsViewItem ({sensation}){
 
 
 
     return (
         <>
         <span>
-            <button value={emotion.emotion_value}>{emotion.emotion_name}</button>
+            <button value={sensation.sensation_value}>{sensation.sensation_name}</button>
         </span>
         </>
     )
 
 };
 
-export default EmotionsViewItem;
+export default SensationsViewItem;

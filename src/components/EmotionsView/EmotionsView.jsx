@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmotionsViewItem from '../EmotionsViewItem/EmotionsViewItem';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function EmotionsView (){
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const emotions = useSelector( store => store.emotions);
 
     useEffect(() => { 
@@ -13,6 +15,10 @@ function EmotionsView (){
         })
     },[])
 
+    function handleNext (){
+        history.push('/sensations')
+    }
+
     return (
         <div>
             <h3>What emotion are you feeling at this moment?</h3>
@@ -20,7 +26,7 @@ function EmotionsView (){
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
             <div>   
-                <button>Next</button>
+                <button onClick={handleNext}>Next</button>
             </div> 
         </div>
     )

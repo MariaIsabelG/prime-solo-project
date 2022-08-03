@@ -23,6 +23,7 @@ import EditForm from '../EditForm/EditForm';
 import StudentLanding from '../StudentLanding/StudentLanding';
 import Breathing from '../Breathing/Breathing';
 import EmotionsView from '../EmotionsView/EmotionsView';
+import SensationsView from '../SensationsView/SensationsView';
 
 import './App.css';
 
@@ -111,6 +112,14 @@ function App() {
             path="/emotions"
           >
             <EmotionsView />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/sensations"
+          >
+            <SensationsView />
           </ProtectedRoute>
           
 
