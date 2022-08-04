@@ -23,8 +23,21 @@ router.get('/', (req, res) => {
 /**
  * POST route template
  */
-router.post('/', (req, res) => {
+router.post('/input', (req, res) => {
   // POST route code here
+  const id = req.body.user_id;
+  const emotionId = req.body.emotion_id;
+  const sensationId = req.body.sensation_id;
+
+  const queryText = 'INSERT INTO "input" ("user_id", "emotion_id", "sensation_id") VALUES ($1, $2, $3)'
+  pool.query( queryText, [ id, emotionId, sensationId ])
+  .then((result) => {
+    res.sendStatus(200);
+})
+.catch((error) => {
+    console.log(`Error making database query ${sqlText}`, error);
+    res.sendStatus(500);
+});
 });
 
 router.put('/edit/:id', (req, res) => {
