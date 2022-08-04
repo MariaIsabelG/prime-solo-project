@@ -4,18 +4,18 @@ function EmotionsViewItem ({emotion}){
 
     const dispatch = useDispatch();
 
-    const handleValue  = (emotion_value, emotion_name) => {
+    const handleValue  = (emotion_id, emotion_name) => {
 
         dispatch({
             type: 'EMOTION_VALUE',
-            payload: {emotion_value, emotion_name}
+            payload: {emotion_id, emotion_name}
         })  
     }
 
     return (
         <>
         <span>
-            <button onClick={()=>handleValue(emotion.emotion_value, emotion.emotion_name)}>{emotion.emotion_name}</button>
+            <button onClick={()=>handleValue(emotion.emotion_id, emotion.emotion_name)}>{emotion.emotion_name}</button>
         </span>
         </>
     )

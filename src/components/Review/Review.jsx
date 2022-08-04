@@ -7,6 +7,9 @@ function Review (){
     const history = useHistory();
     const student = useSelector( store => store.user)
 
+    const emotionInput = useSelector( store => store.emotionvalue);
+    const sensationInput = useSelector( store => store.sensationvalue);
+
     function handleSubmit(){
 
 
