@@ -1,12 +1,8 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
 
-function OverviewData (){
+function* OverviewData (){
     try{
-
-        const response = yield axios.get('/api/students');
-        yield put({ type: 'SET_STUDENTS', payload: response.data });
-
         const response = yield axios.get('/api/states/overview');
         yield put({ type: 'SET_OVERVIEW_DATA', payload: response.data });
 
@@ -15,9 +11,9 @@ function OverviewData (){
   }
 };
 
-function* OverviewSaga() {
-    yield takeLatest('FETCH_STUDENTS', OverviewData);
+function* overviewSaga() {
+    yield takeLatest('GET_OVERVIEW_DATA', OverviewData);
   }
   
-  export default OverviewSaga;
+  export default overviewSaga;
 

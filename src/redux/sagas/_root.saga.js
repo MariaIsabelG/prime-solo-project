@@ -8,6 +8,8 @@ import sensationsSaga from './sensations.saga';
 import editSaga from './edit.saga';
 import deleteSaga from './delete.saga';
 import submitSaga from './submit.saga';
+import overviewSaga from './overview.saga';
+
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -27,5 +29,6 @@ export default function* rootSaga() {
     editSaga(),
     deleteSaga(),
     submitSaga(),
+    overviewSaga(),
   ]);
 }

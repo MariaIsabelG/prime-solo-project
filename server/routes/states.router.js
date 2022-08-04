@@ -32,5 +32,18 @@ const router = express.Router();
       });
   });
 
+  router.get('/overview', (req, res) => {
+    // GET route code here  
+    const queryText = `SELECT full_name FROM "user" WHERE access_level = 2;`;
+    pool.query( queryText )
+    .then ( response =>{
+      res.send( response.rows );
+      console.log( response.rows ); 
+      }).catch((error) => {
+        console.log('Error getting sensations:', error);
+        res.sendStatus(500);
+      });
+  });
+
 
 module.exports = router;
