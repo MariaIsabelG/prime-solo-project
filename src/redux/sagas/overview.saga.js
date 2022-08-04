@@ -20,7 +20,4 @@ function* OverviewSaga() {
   }
   
   export default OverviewSaga;
-<<<<<<< HEAD
 }
-=======
->>>>>>> feature-overview-chart
