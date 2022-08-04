@@ -23,6 +23,7 @@ import Breathing from '../Breathing/Breathing';
 import EmotionsView from '../EmotionsView/EmotionsView';
 import SensationsView from '../SensationsView/SensationsView';
 import Review from '../Review/Review';
+import Thanks from '../Thanks/Thanks';
 
 function App() {
   const dispatch = useDispatch();
@@ -135,11 +136,11 @@ function App() {
           </ProtectedRoute>
           
 
-          {/* <Route
+          <Route
             exact
             path="/login"
           >
-            {user.access_level === 2 ?
+            {user.access_level ?
               // If the user is already logged in, 
               // redirect to the /teacher-home page
               <Redirect to="/info" />
@@ -147,7 +148,7 @@ function App() {
               // Otherwise, show the login page
               <LoginPage />
             }
-          </Route> */}
+          </Route>
 
 
           {/* If none of the other routes matched, we will show a 404. */}
