@@ -3,10 +3,11 @@
 
 function OverviewChart(){
 
-    
+
 
     return(
-
+        <h3>Overview</h3>
+        
     )
 };
 
