@@ -125,6 +125,14 @@ function App() {
           >
             <Review />
           </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/thanks"
+          >
+            <Thanks />
+          </ProtectedRoute>
           
 
           {/* <Route
