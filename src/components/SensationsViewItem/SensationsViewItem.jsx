@@ -14,7 +14,7 @@ function SensationsViewItem ({sensation}){
 
     return (
         <span>
-           <button onClick={()=>handleValue(sensation.sensation_id, sensation.sensation_name)}>{sensation.sensation_name}</button>
+           <button onClick={()=>handleValue(sensation.id, sensation.sensation_name)}>{sensation.sensation_name}</button>
         </span>
 
     )
