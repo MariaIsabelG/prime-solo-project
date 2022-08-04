@@ -5,6 +5,7 @@ import AddStudent from '../AddStudent/AddStudent';
 import StudentList from '../StudentList/StudentList';
 import EmotionsList from '../EmotionsList/EmotionsList';
 import SensationsList from '../SensationsList/SensationsList';
+import OverviewChart from '../OverviewChart/OverviewChart';
 
 function TeacherHome(){
 
@@ -18,6 +19,7 @@ function TeacherHome(){
         <StudentList/>
         <EmotionsList/>
         <SensationsList/>
+        <OverviewChart/>
         
         <LogOutButton className="btn" />
       </div>
