@@ -15,8 +15,6 @@ function EmotionsView (){
             type: 'FETCH_EMOTIONS'
         })
     },[])
-
-    
     
     function handleNext () {
 
