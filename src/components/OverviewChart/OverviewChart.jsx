@@ -2,10 +2,23 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
 
 function OverviewChart(){
-// NEED TO --- put the second y axis on the other side 
-// NEED TO --- show emotion and sensastion names in y axis values
+
+    const dispatch = useDispatch();
+
+    useEffect(() => { 
+        dispatch({
+            type: 'GET_OVERVIEW_DATA',
+        })
+    },[])
+    
+
+
+
     
     const data = { 
         labels: ['Babis', 'Michael', 'Paola'],
