@@ -17,13 +17,14 @@ function Review (){
             type: 'SUBMIT_INPUT',
             payload: {
                 user_id: user.id, 
-                emotion_id: emotionInput.emotion_id, 
+                emotion_id: emotionInput.emotion_id,
                 sensation_id: sensationInput.sensation_id
             }
         })
         history.push('/thanks')
     };
 
+    console.log( 'This emotion and sensation data passed:', emotionInput, sensationInput)
     return (
         <div>
         <h2>{student.full_name}, here are the answers you gave:</h2>

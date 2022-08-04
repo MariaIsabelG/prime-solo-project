@@ -7,6 +7,7 @@ import sensations from './sensations.reducer';
 import edit from './edit.reducer';
 import emotionvalue from './emotionvalue.reducer';
 import sensationvalue from './sensationvalue.reducer';
+import overview from './overview.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   edit,
   emotionvalue,
   sensationvalue,
+  overview,
 });
 
 export default rootReducer;

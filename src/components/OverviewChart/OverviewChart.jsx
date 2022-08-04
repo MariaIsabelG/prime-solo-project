@@ -16,22 +16,24 @@ function OverviewChart(){
         })
     },[])
     
-
+    const overview = useSelector( (store) => store.overview);
+    let studentName = overview.map((value)=> value.full_name);
+    console.log( 'This is overview data:', overview );
 
 
     
     const data = { 
-        labels: ['Babis', 'Michael', 'Paola'],
+        labels: [studentName],
         datasets: [{
             label: 'Emotions',
-            data: [1, 2, 5],
+            data: [],
             backgroundColor: 'pink',
             tension: .2,
             yAxisID: 'emotion',
             }
             ,{
             label: 'Sensation',
-            data: [5, 4, 1],
+            data: [],
             backgroundColor: 'lightblue', 
             tension: .2,   
             yAxisID: 'physical',

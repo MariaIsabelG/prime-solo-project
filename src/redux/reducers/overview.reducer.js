@@ -1,8 +1,7 @@
 
-const studentsReducer = (state = [], action) => {
+const overviewReducer = (state = [], action) => {
     switch (action.type) {
-      case 'SET_STUDENTS':
-        console.log('students', action.payload);
+      case 'SET_OVERVIEW_DATA':
         return action.payload;
         
       default:
@@ -11,4 +10,4 @@ const studentsReducer = (state = [], action) => {
   };
 
 
-export default studentsReducer;
+export default overviewReducer;
