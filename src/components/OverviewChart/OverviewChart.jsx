@@ -14,16 +14,17 @@ function OverviewChart(){
         dispatch({
             type: 'GET_OVERVIEW_DATA',
         })
+
     },[])
     
     const overview = useSelector( (store) => store.overview);
     let studentName = overview.map((value)=> value.full_name);
     console.log( 'This is overview data:', overview );
-
+    
 
     
     const data = { 
-        labels: [studentName],
+        labels: [],
         datasets: [{
             label: 'Emotions',
             data: [],
