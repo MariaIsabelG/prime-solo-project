@@ -4,7 +4,8 @@ import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 
 function OverviewChart(){
-
+// NEED TO --- put the second y axis on the other side 
+// NEED TO --- show emotion and sensastion names in y axis values
     
     const data = { 
         labels: ['Babis', 'Michael', 'Paola'],
