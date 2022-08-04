@@ -19,6 +19,7 @@ const rootReducer = combineReducers({
   emotions,
   sensations,
   edit,
+  emotionvalue,
 });
 
 export default rootReducer;
