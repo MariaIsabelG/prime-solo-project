@@ -2,20 +2,24 @@ import { useState } from 'react';
 
 function EmotionsViewItem ({emotion}){
 
-    const [emotionValue, setEmotionValue] = useState({emotion_value:''})
+    const [emotionValue, setEmotionValue] = useState({emotion_value: ''})
 
-    function handleValue (event) {
+    function handleValue (value){
 
-        setEmotionValue(emotion.emotion_value)
-        console.log( 'This is my value:', emotionValue)
-    }
+        setEmotionValue({emotion_value: value})
+        
+    };
+
+    console.log('This is emotion value:', emotionValue);
     
+
+
 
 
     return (
         <>
         <span>
-            <button value={emotion.emotion_value} onChange={(event)handleValue(event.target.value)}onClick={handleValue}>{emotion.emotion_name}</button>
+            <button onClick={(event) => handleValue(emotion.emotion_value)}>{emotion.emotion_name}</button>
         </span>
         </>
     )
