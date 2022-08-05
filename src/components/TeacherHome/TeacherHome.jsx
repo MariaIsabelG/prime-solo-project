@@ -13,7 +13,7 @@ function TeacherHome(){
     const user = useSelector((store) => store.user);
     
     return (
-      <div className="container">
+      <div >
         <Nav />
         <h2>Welcome, {user.username}!</h2>
         
