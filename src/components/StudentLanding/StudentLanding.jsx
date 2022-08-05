@@ -18,14 +18,16 @@ function StudentLanding(){
     return (
         <div>
             <h1 className='studentview-title'> Welcome, {student.full_name}!</h1>
-            <div className='studentview-gifposition'>
-            <center><iframe src="https://giphy.com/embed/RJEBGVo2mrGxsujtAE" width="200" height="200" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
-            </div>
             <div className='studentview-bubbleposition'>
             <img  src={logo} width="600" alt="journey"/>
             </div>
-            <h3 className='student-text'>Let's go on self-awareness journey!!!</h3>
+            <div className='studentview-gifposition'>
+            <center><iframe src="https://giphy.com/embed/RJEBGVo2mrGxsujtAE" width="200" height="200" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+            </div>
+            <div >
+            {/* <h3 className='student-text'>Let's go on self-awareness journey!!!</h3> */}
             <button className='student-btn' onClick={handleNext}>Start!</button>
+            </div>
             </div>
 
     )
