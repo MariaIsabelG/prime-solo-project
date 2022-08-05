@@ -2,6 +2,7 @@ import Nav from "../Nav/Nav";
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import StudentChart from '../StudentChart/StudentChart';
 
 
 
@@ -31,7 +32,7 @@ function ViewStudent(){
             <h4>Considerations:</h4><p>{student.considerations}</p>
         </div>
         <button onClick={handleEdit}>Edit</button>
-        
+        <StudentChart/>
         </div>
     )
 
