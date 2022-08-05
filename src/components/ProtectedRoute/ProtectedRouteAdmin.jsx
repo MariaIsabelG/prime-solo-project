@@ -32,7 +32,7 @@ function ProtectedRouteAdmin({ component, children, ...props }) {
         <ProtectedComponentAdmin />
         :
         // Otherwise, redirect to the Loginpage
-        <LoginPage />
+        <Redirect to='/login' />
       }
     </Route>
 

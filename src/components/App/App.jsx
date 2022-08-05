@@ -146,46 +146,19 @@ function App() {
           </ProtectedRouteUser>
           
 
-          <Route
-            exact
-            path="/login"
-          >
-            {user.id && user.access_level === 1 ?
-              // If the user is already logged in, 
-              // redirect to the /teacher-home page
-              <Redirect to="/teacherhome" />
-              :
-              // Otherwise, show the login page
-              <LoginPage />
-            }
-          </Route>
-
-          <Route
-            exact
-            path="/login"
-          >
-            {user.id && user.access_level === 2 ?
-              // If the user is already logged in, 
-              // redirect to the /studentlanding page
-              <Redirect to="/studentlanding" />
-              :
-              // Otherwise, show the login page
-              <LoginPage />
-            }
-          </Route>
-
-{/* <Route
+<Route
     exact
     path="/login"
 >
-    {user.id && user.access_level === 1 ?
-            <Redirect to="/teacherhome" />
-        : user.access_level === 2 ?
-            <Redirect to="/studentlanding" />
-        :
+    {user.access_level === 1 &&
+            <Redirect to="/teacherhome" />}
+
+    {user.access_level === 2 &&
+            <Redirect to="/studentlanding" />}
+
             <LoginPage />
-        }
-</Route> */}
+</Route>
+
 
 
           {/* If none of the other routes matched, we will show a 404. */}

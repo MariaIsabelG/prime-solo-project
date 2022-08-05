@@ -10,7 +10,7 @@ function LogOutButton(props) {
   function handleLogout (){
 
     dispatch({ type: 'LOGOUT' })
-    history.push('/login')
+    history.push('/')
 
   }
 
