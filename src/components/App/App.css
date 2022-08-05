@@ -120,9 +120,10 @@ input {
   border-radius: 50px;
 
 }
-.welcome{
+.student-gif{
   pointer-events: none;
-  border-radius: 200px;
+  border-radius: 80px;
+  text-align: center;
 }
 .welcome-teacherhome{
   font-family: 'Press Start 2P', cursive;
@@ -131,7 +132,17 @@ input {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   margin: 2em;
+}
+.student-text{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.student-btn{
+  border-radius: 10px;
+  text-align: center;
   
 }
-
 
