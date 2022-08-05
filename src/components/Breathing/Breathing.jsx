@@ -16,9 +16,9 @@ function StudentLanding(){
 
     return (
         <div>
-            <h3 className="student-text">Please take three deep breaths with our friend the giraffe.</h3>
-            
-            <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="480" height="270" frameBorder="0" className="breathing" allowFullScreen></iframe></center>
+            <h1 className="student-text">Breathing</h1>
+            <img className="student-bubbleposition" width="500" src={breathingGif} alt="giraffe-gif"/>
+            <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="480" height="270" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             <h3 className="student-text">Click Next when you are done!</h3>
             <div>
             <button className="student-btn" onClick={handleNext}>Next</button>

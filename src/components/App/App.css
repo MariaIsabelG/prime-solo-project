@@ -112,11 +112,7 @@ input {
   margin: 10px;
 
 }
-.breathing{
-  pointer-events: none;
-  border-radius: 50px;
 
-}
 .student-gif{
   pointer-events: none;
   border-radius: 70px;
@@ -128,10 +124,9 @@ input {
   display: block;
 
 }
-.studentview-bubbleposition{
+.student-bubbleposition{
   display: block;
-  margin-left: 30em;
- 
+  margin-left: 42em;
 
 }
 .welcome-teacherhome{
@@ -201,7 +196,7 @@ body{
 .student-btn:hover{
   width: 200px;
   border: 3px solid 36d79a;
-  background: transparent;
+  background: rgb(74, 156, 237);
   color: black;
 }
 
