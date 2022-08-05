@@ -174,6 +174,19 @@ function App() {
             }
           </Route>
 
+{/* <Route
+    exact
+    path="/login"
+>
+    {user.id && user.access_level === 1 ?
+            <Redirect to="/teacherhome" />
+        : user.access_level === 2 ?
+            <Redirect to="/studentlanding" />
+        :
+            <LoginPage />
+        }
+</Route> */}
+
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
