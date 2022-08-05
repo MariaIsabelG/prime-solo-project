@@ -6,8 +6,6 @@ function StudentItem ({student}){
     const dispatch = useDispatch();
     const history = useHistory();
 
-
-
     const handleEdit = () => {
 
         dispatch({
@@ -18,12 +16,14 @@ function StudentItem ({student}){
         console.log( 'This is student in studentitem:', student );
     }
 
+
+
     return (
 
         <tr key={student.id}>
             <td>{student.full_name}</td>
             <td>
-                <button>View</button>
+                <button onClick={handleView}>View</button>
                 <button onClick={handleEdit}>Edit</button>
             </td>
         </tr>
