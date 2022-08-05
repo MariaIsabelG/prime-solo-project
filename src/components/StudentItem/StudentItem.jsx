@@ -16,6 +16,10 @@ function StudentItem ({student}){
         console.log( 'This is student in studentitem:', student );
     }
 
+    const handleView = () => {
+    
+        history.push('/viewstudent');
+    }
 
 
     return (

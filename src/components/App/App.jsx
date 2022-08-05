@@ -24,6 +24,7 @@ import EmotionsView from '../EmotionsView/EmotionsView';
 import SensationsView from '../SensationsView/SensationsView';
 import Review from '../Review/Review';
 import Thanks from '../Thanks/Thanks';
+import ViewStudent from '../ViewStudent/ViewStudent';
 
 function App() {
   const dispatch = useDispatch();
@@ -86,6 +87,14 @@ function App() {
             path="/edit"
           >
             <EditForm />
+          </ProtectedRouteAdmin>
+
+          <ProtectedRouteAdmin
+            // logged in shows Edit page else shows LoginPage
+            exact
+            path="/viewstudent"
+          >
+            <ViewStudent />
           </ProtectedRouteAdmin>
 
           <ProtectedRouteUser
