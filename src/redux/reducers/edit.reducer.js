@@ -1,6 +1,6 @@
 const editStudent = (state = {}, action) => {
     switch (action.type) {
-        case 'SET_EDIT_STUDENT':
+        case 'SET_SELECTED_STUDENT':
             console.log( 'This is action.payload in set edit student:', action.payload );
             return action.payload;
     

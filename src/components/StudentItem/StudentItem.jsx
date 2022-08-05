@@ -9,7 +9,7 @@ function StudentItem ({student}){
     const handleEdit = () => {
 
         dispatch({
-            type: 'SET_EDIT_STUDENT',
+            type: 'SET_SELECTED_STUDENT',
             payload: student
         })
         history.push('/edit');
@@ -17,7 +17,11 @@ function StudentItem ({student}){
     }
 
     const handleView = () => {
-    
+        
+        dispatch({
+            type: 'SET_SELECTED_STUDENT',
+            payload: student
+        })
         history.push('/viewstudent');
     }
 
