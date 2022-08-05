@@ -124,8 +124,18 @@ input {
   pointer-events: none;
   border-radius: 70px;
   text-align: center;
+  display: inline;
   /* border: 2px solid #1583b5; */
   background-color: rgb(245, 245, 106);
+}
+.studentview-gifposition{
+  display: inline-block;
+
+  
+}
+.studentview-bubbleposition{
+  display: inline-block;
+
 }
 .welcome-teacherhome{
   font-family: 'Press Start 2P', cursive;
