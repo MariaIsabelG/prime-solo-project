@@ -124,6 +124,8 @@ input {
   pointer-events: none;
   border-radius: 70px;
   text-align: center;
+  border: 5px dashed #1583b5;
+  background-color: #89CFF0;
 }
 .welcome-teacherhome{
   font-family: 'Press Start 2P', cursive;
@@ -142,6 +144,11 @@ input {
 }
 body{
   font-family: 'Press Start 2P', cursive;
+  background-color: white;
+  opacity: 0.8;
+  background-image:  linear-gradient(#f1eded 3px, transparent 3px), linear-gradient(to right, #f1eded 3px, #ffffff 3px);
+  background-size: 20px 20px;
+  
 }
 .student-btn{
   display: block;
