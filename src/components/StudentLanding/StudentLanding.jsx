@@ -20,10 +20,9 @@ function StudentLanding(){
             <center><iframe src="https://giphy.com/embed/E1w0yvMxBIv5M8WkL8" width="300" height="300" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             {/* <h3 className='student-text'>Thanks for stopping by. Please take a moment to get comfortable.</h3> */}
             <h3 className='student-text'>Let's go on self-awareness journey!!!</h3>
-            <div className='student-btn'>
-                <button  onClick={handleNext}>Start!</button>
+            <button className='student-btn' onClick={handleNext}>Start!</button>
             </div>
-        </div>
+
     )
 
 };
