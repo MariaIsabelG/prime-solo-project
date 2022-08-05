@@ -120,7 +120,6 @@ input {
 .student-gif{
   pointer-events: none;
   border-radius: 70px;
-  text-align: center;
   /* border: 2px solid #1583b5; */
   background-color: rgb(241, 241, 166);
 }
@@ -129,8 +128,7 @@ input {
 }
 .studentview-bubbleposition{
   display: block;
-  float: right;
-  margin-right: 30px;
+  margin-left: 30em;
 
 }
 .welcome-teacherhome{
