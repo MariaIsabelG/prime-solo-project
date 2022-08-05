@@ -15,7 +15,7 @@ function TeacherHome(){
     return (
       <div >
         <Nav />
-        <h2>Welcome, {user.username}!</h2>
+        <h3 className='welcome-teacherhome'>Welcome, {user.username}!</h3>
         
         <AddStudent/>
         <StudentList/>

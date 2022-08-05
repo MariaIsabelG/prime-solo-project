@@ -118,10 +118,20 @@ input {
 .breathing{
   pointer-events: none;
   border-radius: 50px;
+
 }
 .welcome{
   pointer-events: none;
   border-radius: 200px;
+}
+.welcome-teacherhome{
+  font-family: 'Press Start 2P', cursive;
+}
+.studentview-title{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin: 2em;
+  
 }
 
 
