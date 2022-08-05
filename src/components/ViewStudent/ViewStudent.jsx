@@ -21,6 +21,10 @@ function ViewStudent(){
 
         history.push('/edit');
     }
+
+    function handleHome(){
+        history.push('/teacherhome');
+    };
     
     return(
         <div>
@@ -32,6 +36,7 @@ function ViewStudent(){
             <h4>Considerations:</h4><p>{student.considerations}</p>
         </div>
         <button onClick={handleEdit}>Edit</button>
+        <button onClick={handleHome}>Home</button>
         <StudentChart/>
         </div>
     )
