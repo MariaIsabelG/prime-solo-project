@@ -30,8 +30,8 @@ function ViewStudent(){
         <div>
             <Nav />
         
-        <h3>{student.full_name}</h3>
         <div>
+            <h4>Student Name:</h4><p>{student.full_name}</p>
             <h4>Username:</h4><p> {student.username}</p>
             <h4>Considerations:</h4><p>{student.considerations}</p>
         </div>
