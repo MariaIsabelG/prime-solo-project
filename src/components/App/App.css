@@ -4,10 +4,7 @@ body,
   height: 100%;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0px;
-}
+
 
 img {
   display: inline-block;
@@ -125,7 +122,7 @@ input {
   border-radius: 70px;
   text-align: center;
   /* border: 2px solid #1583b5; */
-  background-color: rgb(245, 245, 106);
+  background-color: rgb(241, 241, 166);
 }
 .studentview-gifposition{
   display: block;
@@ -133,6 +130,7 @@ input {
 .studentview-bubbleposition{
   display: block;
   float: right;
+  margin-right: 30px;
 
 }
 .welcome-teacherhome{
