@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import breathingGif from '../Images/breathing.gif';
 
 
 function StudentLanding(){
@@ -15,11 +16,12 @@ function StudentLanding(){
 
     return (
         <div>
-            <h3>{student.full_name}, please take three deep breaths with our friend the giraffe.</h3>
-            <h3>When you finish your three breaths, please click the Next button!</h3>
-            <iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="480" height="270" frameBorder="0" className="breathing" allowFullScreen></iframe>
+            <h3 className="student-text">Please take three deep breaths with our friend the giraffe.</h3>
+            
+            <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="480" height="270" frameBorder="0" className="breathing" allowFullScreen></iframe></center>
+            <h3 className="student-text">Click Next when you are done!</h3>
             <div>
-            <button onClick={handleNext}>Next</button>
+            <button className="student-btn" onClick={handleNext}>Next</button>
             </div>
         </div>
     )
