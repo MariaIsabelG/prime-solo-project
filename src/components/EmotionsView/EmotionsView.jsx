@@ -24,11 +24,13 @@ function EmotionsView (){
     return (
         <div>
             <h3>What emotion are you feeling at this moment?</h3>
+            <div className="emotion-container">
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
+            </div>    
             <div>   
-                <button onClick={handleNext}>Next</button>
+                <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
         </div>
     )
