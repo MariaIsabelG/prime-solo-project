@@ -21,6 +21,7 @@ function EmotionsView (){
         history.push('/sensations')
     }
 
+    console.log('This is emotions:', emotions)
     return (
         <div>
             <h3>What emotion are you feeling at this moment?</h3>
