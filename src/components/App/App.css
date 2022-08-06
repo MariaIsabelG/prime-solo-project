@@ -177,8 +177,8 @@ body{
   font-family: 'Press Start 2P', cursive;
   border-radius: 15px;
   margin: auto;
-  margin-top: 50px;
   border: 4px solid black;
+  margin-top: 50px;
 }
 
 .student-btn:hover{
@@ -189,8 +189,8 @@ body{
 }
 
 .emotion-btn{
-  height: 5em;
-  width: 15em;
+  height: 3.5em;
+  width: 14em;
   font-family: 'Press Start 2P', cursive;
   border-radius: 20px;
   border: 4px solid black;
@@ -218,8 +218,8 @@ body{
   color: black;
 }
 .sensation-btn{
-  height: 5em;
-  width: 15em;
+  height: 4em;
+  width: 14em;
   font-family: 'Press Start 2P', cursive;
   border-radius: 20px;
   border: 4px solid black;
@@ -239,6 +239,7 @@ body{
   text-align: center;
   overflow:visible;
   white-space: nowrap;
+  font-size: 12px;
 
 
 }
@@ -251,7 +252,7 @@ body{
 }
 .emotion-container{
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 170px 170px 170px 170px 170px;
   /* grid-auto-rows: minmax(90px, auto); */
   grid-row-gap: 30px;
   grid-column-gap: 40px;
@@ -262,8 +263,8 @@ body{
 
 .sensation-container{
   display: grid;
-  grid-template-columns: 200px 200px 330px;
-  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-columns: 170px 170px 170px 170px 170px;
+  grid-template-rows: 60px 60px;
   grid-row-gap: 18px;
   grid-column-gap: 40px;
   justify-content: center;

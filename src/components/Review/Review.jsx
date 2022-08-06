@@ -26,7 +26,7 @@ function Review (){
 
     console.log( 'This emotion and sensation data passed:', emotionInput, sensationInput)
     return (
-        <div>
+        <div className="review-container">
         <h2>{student.full_name}, here are the answers you gave:</h2>
             <h3>Emotion: {emotionInput.emotion_name} </h3>
             <h3>Sensation: {sensationInput.sensation_name}</h3>

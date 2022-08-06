@@ -33,8 +33,8 @@ function EmotionsView (){
             <h1 className="student-text">Emotions</h1>
             <img className="student-bubbleposition" src={emotionGif} width="610" alt="emotion-gif"/>
 
-            <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="230" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
-            <h3 className="student-text">Your emotion: {chosenOne.emotion_name}</h3>
+            <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+            <h5 className="student-text">Your emotion: {chosenOne.emotion_name}</h5>
             <div className="emotion-container">
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
