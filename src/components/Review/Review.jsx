@@ -34,7 +34,7 @@ function Review (){
         <div className="review-container">
             <h3>Emotion: {emotionInput.emotion_name} </h3>
             <h3>Sensation: {sensationInput.sensation_name}</h3>
-            <button onClick={handleSubmit}>Submit</button>
+            <button className="student-btn" onClick={handleSubmit}>Submit</button>
         </div>
         </div>
     )
