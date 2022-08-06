@@ -127,6 +127,7 @@ input {
   border: 8px solid #14acf3;
   border-style: double ;
   background-color: whitesmoke;
+  position: relative;
 }
 .studentview-gifposition{
   display: block;
@@ -152,6 +153,7 @@ input {
   padding-left: 3em;
   padding-right: 3em;
   display: block;
+  color:black;
 }
 body{
   font-family: 'Press Start 2P', cursive;
@@ -187,7 +189,7 @@ body{
 }
 
 .emotion-btn{
-  height: 6em;
+  height: 5em;
   width: 15em;
   font-family: 'Press Start 2P', cursive;
   border-radius: 20px;

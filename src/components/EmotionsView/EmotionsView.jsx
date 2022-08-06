@@ -9,6 +9,7 @@ function EmotionsView (){
     const dispatch = useDispatch();
     const history = useHistory();
     const emotions = useSelector( store => store.emotions);
+    const chosenOne = useSelector( store => store.emotionvalue);
 
     useEffect(() => { 
         dispatch({
@@ -28,12 +29,12 @@ function EmotionsView (){
             <img className="student-bubbleposition" src={emotionGif} width="610" alt="emotion-gif"/>
 
             <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="230" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
-
+            <h3 className="student-text">Your emotion: {chosenOne.emotion_name}</h3>
             <div className="emotion-container">
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
-            </div>    
+            </div> 
             <div>   
                 <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
