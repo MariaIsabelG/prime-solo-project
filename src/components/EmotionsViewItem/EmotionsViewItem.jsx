@@ -17,7 +17,7 @@ function EmotionsViewItem ({emotion}){
     return (
         <>
         <span onClick={()=>handleValue(emotion.id, emotion.emotion_name)}>
-            <button className='emotion-btn'>{emotion.emotion_name}</button>
+            <button className='states-btn'>{emotion.emotion_name}</button>
         </span>
 
         </>

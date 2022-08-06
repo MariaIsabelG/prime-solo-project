@@ -8,6 +8,7 @@ function SensationsView (){
     const dispatch = useDispatch();
     const history = useHistory();
     const sensations = useSelector( store => store.sensations);
+    const chosenOne = useSelector( store => store.sensationvalue);
 
     useEffect(() => { 
        
@@ -22,12 +23,15 @@ function SensationsView (){
 
     return (
         <div>
-            <h3>What sensation can you recognize at this moment?</h3>
+            <img className="student-bubbleposition" src={} width="610" alt="sensation-gif"/>
+
+<center></center>
+<h3 className="student-text">Your sensastion: {chosenOne.sensation_name}</h3>
                 {sensations.map((sensation) => {
                     return <SensationsViewItem key={sensation.id} sensation={sensation} />
                 })}
             <div>   
-                <button onClick={handleNext}>Next</button>
+                <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
         </div>
     )

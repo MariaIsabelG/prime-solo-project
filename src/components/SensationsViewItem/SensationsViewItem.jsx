@@ -14,7 +14,7 @@ function SensationsViewItem ({sensation}){
 
     return (
         <span>
-           <button onClick={()=>handleValue(sensation.id, sensation.sensation_name)}>{sensation.sensation_name}</button>
+           <button className="states-btn" onClick={()=>handleValue(sensation.id, sensation.sensation_name)}>{sensation.sensation_name}</button>
         </span>
 
     )
