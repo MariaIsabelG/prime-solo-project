@@ -8,7 +8,6 @@ function EmotionsView (){
     const dispatch = useDispatch();
     const history = useHistory();
     const emotions = useSelector( store => store.emotions);
-    
 
     useEffect(() => { 
         dispatch({
