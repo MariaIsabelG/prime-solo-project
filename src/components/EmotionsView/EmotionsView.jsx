@@ -19,10 +19,15 @@ function EmotionsView (){
     
     function handleNext () {
 
+        if(!chosenOne.emotion_name){
+            alert('You must choose an emotion');
+        }else{
+        
         history.push('/sensations')
+        }
     }
 
-    console.log('This is emotions:', emotions)
+    console.log('This is emotions:', chosenOne)
     return (
         <div>
             <h1 className="student-text">Emotions</h1>

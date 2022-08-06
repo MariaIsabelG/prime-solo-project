@@ -11,7 +11,6 @@ import './App.css';
 import Footer from '../Footer/Footer';
 import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
 import ProtectedRouteUser from '../ProtectedRoute/ProtectedRouteUser';
-import ScrollToTop from '../../hooks/scrollToTop';
 import AboutPage from '../AboutPage/AboutPage';
 //import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';

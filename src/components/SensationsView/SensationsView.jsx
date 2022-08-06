@@ -19,7 +19,12 @@ function SensationsView (){
     },[])
 
     function handleNext() {
+
+        if(!chosenOne.sensation_name){
+            alert('You must choose an sensation');
+        }else{
         history.push('/review')
+        }
     };
 
     return (
