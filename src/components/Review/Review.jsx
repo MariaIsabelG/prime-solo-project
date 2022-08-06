@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import reviewGif from '../Images/review.gif';
 
 function Review (){
 
@@ -27,7 +28,9 @@ function Review (){
     console.log( 'This emotion and sensation data passed:', emotionInput, sensationInput)
     return (
         <div>
-        <h2 className="student-text">{student.full_name}, here are the answers you gave:</h2>
+        <h1 className="student-text">Review</h1>
+        <img className="student-bubbleposition" width="400" src={reviewGif} alt="review-gif"/>
+        <center><iframe src="https://giphy.com/embed/tZlrPHabl7C4kvMulU" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
         <div className="review-container">
             <h3>Emotion: {emotionInput.emotion_name} </h3>
             <h3>Sensation: {sensationInput.sensation_name}</h3>
