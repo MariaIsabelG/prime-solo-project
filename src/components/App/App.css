@@ -253,11 +253,9 @@ body{
 .emotion-container{
   display: grid;
   grid-template-columns: 170px 170px 170px 170px 170px;
-  /* grid-auto-rows: minmax(90px, auto); */
   grid-row-gap: 30px;
   grid-column-gap: 40px;
   justify-content: center;
-  /* align-content: center; */
 
 }
 
@@ -271,7 +269,10 @@ body{
   align-content: center;
 }
 
-  
+.review-container{
+  border: 10px solid black;
+  height: 200px
+}
 
 
 
