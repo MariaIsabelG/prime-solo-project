@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmotionsViewItem from '../EmotionsViewItem/EmotionsViewItem';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function EmotionsView (){
