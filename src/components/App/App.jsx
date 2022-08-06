@@ -11,6 +11,7 @@ import './App.css';
 import Footer from '../Footer/Footer';
 import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
 import ProtectedRouteUser from '../ProtectedRoute/ProtectedRouteUser';
+import ScrollToTop from '../../hooks/scrollToTop';
 import AboutPage from '../AboutPage/AboutPage';
 //import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -52,14 +53,6 @@ function App() {
           >
             <AboutPage />
           </Route>
-
-          {/* <Route
-            // shows AboutPage at all times (logged in or not)
-            exact
-            path="/registration"
-          >
-            <RegisterPage />
-          </Route> */}
 
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/ will show the UserPage if the user is logged in.
@@ -135,6 +128,7 @@ function App() {
             path="/sensations"
           >
             <SensationsView />
+
           </ProtectedRouteUser>
 
           <ProtectedRouteUser
