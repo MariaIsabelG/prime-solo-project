@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import EmotionsViewItem from '../EmotionsViewItem/EmotionsViewItem';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import emotionGif from '../Images/emotions.gif';
 
 function EmotionsView (){
 
@@ -23,7 +24,11 @@ function EmotionsView (){
     console.log('This is emotions:', emotions)
     return (
         <div>
-            <h3>What emotion are you feeling at this moment?</h3>
+            <h1 className="student-text">Emotions</h1>
+            <img className="student-bubbleposition" src={emotionGif} width="610" alt="emotion-gif"/>
+
+            <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="230" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+
             <div className="emotion-container">
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
