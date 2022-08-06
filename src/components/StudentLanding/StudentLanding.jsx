@@ -22,7 +22,7 @@ function StudentLanding(){
                 <img  src={logo} width="600" alt="journey"/>
             </div>
             <div className='studentview-gifposition'>
-                <center><iframe src="https://giphy.com/embed/RJEBGVo2mrGxsujtAE" width="200" height="200" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+                <center><iframe src="https://giphy.com/embed/RJEBGVo2mrGxsujtAE" width="250" height="250" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             </div>
             <div >
                 <button className='student-btn' onClick={handleNext}>Start!</button>
