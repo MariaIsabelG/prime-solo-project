@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import AddStudent from '../AddStudent/AddStudent';
 import StudentItem from '../StudentItem/StudentItem';
 
 
@@ -17,12 +18,12 @@ function StudentList (){
 
     return (
 
-        <div className="grey-div">
+        <div className="student-list-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Your Students</th>
-                        <th>Actions</th>
+                        <th><h5>Your Students</h5></th>
+                        <th><h5>Actions</h5></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,7 @@ function StudentList (){
                     })}
                 </tbody>
             </table>
+            <AddStudent/>
         </div>
 
     )

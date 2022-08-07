@@ -14,8 +14,8 @@ function EmotionsList (){
     },[])
 
     return (
-        <div className="grey-div">
-            <h3>Emotions available:</h3>
+        <div className="teacher-emotion-container">
+            <h5>Emotions available:</h5>
                 {emotions.map((emotion) => {
                     return <EmotionsItem key={emotion.id} emotion={emotion} />
                 })}

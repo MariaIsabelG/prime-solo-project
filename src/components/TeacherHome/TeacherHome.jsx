@@ -15,15 +15,16 @@ function TeacherHome(){
     return (
       <div >
         <Nav />
-        <h3 className='welcome-teacherhome'>Welcome, {user.username}!</h3>
+        <h1 className='student-text'>Welcome, {user.username}!</h1>
         
-        <AddStudent/>
+      <div className="teacher-home-container" >
         <StudentList/>
+        <OverviewChart/>
         <EmotionsList/>
         <SensationsList/>
-        <OverviewChart/>
         
-        <LogOutButton className="btn" />
+        </div>
+
       </div>
     )
 };

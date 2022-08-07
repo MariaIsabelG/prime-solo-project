@@ -31,8 +31,8 @@ function StudentItem ({student}){
         <tr key={student.id}>
             <td>{student.full_name}</td>
             <td>
-                <button onClick={handleView}>View</button>
-                <button onClick={handleEdit}>Edit</button>
+                <button className="student-list-btn" onClick={handleView}>View</button>
+                <button className="student-list-btn" onClick={handleEdit}>Edit</button>
             </td>
         </tr>
     )

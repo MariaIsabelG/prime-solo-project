@@ -10,9 +10,9 @@ function AddStudent (){
 
     return (
 
-        <div className="grey-div">
-            <h3>Add a student</h3>
-            <button onClick={registration}>Add student</button>
+        <div >
+            <h5 className="student-text">Add a student</h5>
+            <button className="teacher-btn" onClick={registration}>Add student</button>
         </div>
     )
 
