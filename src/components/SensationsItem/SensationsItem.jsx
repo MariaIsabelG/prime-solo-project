@@ -4,7 +4,7 @@ function SensationsItem ({sensation}){
 
     return (
         <span>
-            <button>{sensation.sensation_name}</button>
+            <p>{sensation.sensation_name}</p>
         </span>
     )
 

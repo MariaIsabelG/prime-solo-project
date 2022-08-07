@@ -47,7 +47,7 @@ function OverviewChart(){
         <div>
             
             <div className="overviewchart-container" style={{width: '500px', margin: '0 auto'}}>
-            <h3>Overview Chart</h3>
+            <h5>Overview Chart</h5>
                 <Bar data = {data}/>
             </div> 
         </div>
