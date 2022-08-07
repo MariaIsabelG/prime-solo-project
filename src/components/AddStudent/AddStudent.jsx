@@ -11,7 +11,7 @@ function AddStudent (){
     return (
 
         <div >
-            <button className="teacher-btn" onClick={registration}>Add student</button>
+            <button className="teacher-yellow-btn" onClick={registration}>Add student</button>
         </div>
     )
 

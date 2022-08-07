@@ -23,8 +23,8 @@ function DeleteStudent ({id}){
 
     return (
         <div>
-            <button onClick={handleDelete}>Delete Student</button>
-            <button onClick={handleCancel}>Cancel</button>
+            <button className="student-list-delete-btn" onClick={handleDelete}>Delete Student</button>
+            <button className="student-list-home-btn" onClick={handleCancel}>Cancel</button>
         </div>
     )
 

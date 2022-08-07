@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import DeleteStudent from '../DeleteStudent/DeleteStudent';
+import Nav from '../Nav/Nav';
 
 function EditForm() {
 
@@ -30,8 +31,11 @@ function EditForm() {
         return (
 
                 <>
-                    <h2>Edit Student</h2>
-                    <p>We are editing this student: {student.full_name} with id: {student.id}</p>
+                <Nav/>
+                <div className='edit-student-container'>
+                    <h5>Edit Student</h5>
+                    {/* <p>We are editing this student: {student.full_name} with id: {student.id}</p> */}
+                    
                     <form onSubmit={handleSubmit}>
                         <label>Student Name:
                         <input
@@ -51,9 +55,10 @@ function EditForm() {
                         placeholder='Considerations'
                         value={student.considerations}
                         /></label><br/>
-                        <input type='submit' value='Update Student' />
+                        <button className="student-list-update-btn" type='submit' value='Update Student'>Update</button>
                     </form>
                     <DeleteStudent id={student.id} />
+                    </div>
                     
                 </>
                 );

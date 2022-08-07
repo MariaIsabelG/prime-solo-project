@@ -34,8 +34,8 @@ function ViewStudent(){
             <h5>Username:</h5><p> {student.username}</p>
             <h5>Considerations:</h5><p>{student.considerations}</p>
        
-        <button className="student-list-edit-btn" onClick={handleEdit}>Edit</button>
-        <button className="student-list-home-btn" onClick={handleHome}>Home</button>
+        <button className="teacher-blue-btn" onClick={handleEdit}>Edit</button>
+        <button className="teacher-home-btn" onClick={handleHome}>Home</button>
         </div>
         <div className="student-chart-container">
         <StudentChart/>

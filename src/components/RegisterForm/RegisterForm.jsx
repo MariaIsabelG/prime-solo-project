@@ -32,7 +32,7 @@ function RegisterForm() {
   }; // end registerUser
 
   return (
-    <form className="formPanel" onSubmit={registerUser}>
+    <form className="register" onSubmit={registerUser}>
       <h2>Register User</h2>
       {errors.registrationMessage && (
         <h3 className="alert" role="alert">
@@ -108,7 +108,7 @@ function RegisterForm() {
           />
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="teacher-yellow-btn" type="submit" name="submit" value="Register" />
       </div>
     </form>
   );
