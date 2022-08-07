@@ -35,7 +35,7 @@ function ViewStudent(){
             <h5>Considerations:</h5><p>{student.considerations}</p>
        
         <button className="teacher-blue-btn" onClick={handleEdit}>Edit</button>
-        <button className="teacher-home-btn" onClick={handleHome}>Home</button>
+        <button className="teacher-green-btn" onClick={handleHome}>Home</button>
         </div>
         <div className="student-chart-container">
         <StudentChart/>

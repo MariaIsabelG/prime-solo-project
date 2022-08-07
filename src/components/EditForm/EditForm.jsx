@@ -34,8 +34,6 @@ function EditForm() {
                 <Nav/>
                 <div className='edit-student-container'>
                     <h5>Edit Student</h5>
-                    {/* <p>We are editing this student: {student.full_name} with id: {student.id}</p> */}
-                    
                     <form onSubmit={handleSubmit}>
                         <label>Student Name:
                         <input
@@ -59,7 +57,6 @@ function EditForm() {
                     </form>
                     <DeleteStudent id={student.id} />
                     </div>
-                    
                 </>
                 );
 };

@@ -97,7 +97,7 @@ function RegisterForm() {
             value='2'
             required
             onChange={(event) => setAccess(event.target.value)}
-            checked/>
+            />
           <label htmlFor="access">Teacher</label>
           <input
             type="radio"
