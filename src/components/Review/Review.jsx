@@ -22,7 +22,14 @@ function Review (){
                 sensation_id: sensationInput.sensation_id
             }
         })
+        dispatch({type: 'CLEAR_EMOTION'});
+        dispatch({type: 'CLEAR_SENSATION'});
+
         history.push('/thanks')
+    };
+    function handleBack() {
+
+        history.push('/sensations')
     };
 
     console.log( 'This emotion and sensation data passed:', emotionInput, sensationInput)
@@ -34,7 +41,10 @@ function Review (){
         <div className="review-container">
             <h3>Emotion: {emotionInput.emotion_name} </h3>
             <h3>Sensation: {sensationInput.sensation_name}</h3>
+            <div>
+            <button className='back-btn' onClick={handleBack}>Back</button>
             <button className="student-btn" onClick={handleSubmit}>Submit</button>
+            </div>
         </div>
         </div>
     )

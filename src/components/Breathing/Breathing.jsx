@@ -13,6 +13,11 @@ function StudentLanding(){
         history.push('/emotions')
     };
 
+    function handleBack() {
+
+        history.push('/studentlanding')
+    };
+
 
     return (
         <div>
@@ -21,6 +26,7 @@ function StudentLanding(){
             <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="400" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             <h5 className="student-text">Click Next when you are done!</h5>
             <div>
+            <button className='back-btn' onClick={handleBack}>Back</button>
             <button className="student-btn" onClick={handleNext}>Next</button>
             </div>
         </div>

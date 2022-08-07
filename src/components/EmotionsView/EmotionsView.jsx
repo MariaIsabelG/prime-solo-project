@@ -25,9 +25,13 @@ function EmotionsView (){
         
         history.push('/sensations')
         }
-    }
+    };
 
-    console.log('This is emotions:', chosenOne)
+    function handleBack() {
+
+        history.push('/breathing')
+    };
+
     return (
         <div>
             <h1 className="student-text">Emotions</h1>
@@ -40,7 +44,8 @@ function EmotionsView (){
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
             </div> 
-            <div>   
+            <div> 
+                <button className='back-btn' onClick={handleBack}>Back</button>  
                 <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
         </div>

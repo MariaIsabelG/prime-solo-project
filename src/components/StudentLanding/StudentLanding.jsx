@@ -15,6 +15,7 @@ function StudentLanding(){
     };
 
 
+
     return (
         <div>
             <h1 className='studentview-title'> Welcome, {student.full_name}!</h1>

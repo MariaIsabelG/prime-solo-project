@@ -4,6 +4,9 @@ const emotionValueReducer = (state = {}, action) => {
         case 'EMOTION_VALUE':
             return action.payload
         
+        case 'CLEAR_EMOTION':
+              return {};
+        
       default:
         return state;
     }

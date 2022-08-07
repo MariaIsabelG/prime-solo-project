@@ -27,6 +27,11 @@ function SensationsView (){
         }
     };
 
+    function handleBack() {
+
+        history.push('/emotions')
+    };
+
     return (
         <div>
             <h1 className="student-text">Sensations</h1>
@@ -39,7 +44,8 @@ function SensationsView (){
                     return <SensationsViewItem key={sensation.id} sensation={sensation} />
                 })}
             </div>
-            <div>   
+            <div> 
+                <button className='back-btn' onClick={handleBack}>Back</button>  
                 <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
         </div>
