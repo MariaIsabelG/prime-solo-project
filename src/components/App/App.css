@@ -280,15 +280,87 @@ input {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 60em;
+  width: 52em;
   margin: auto;
   text-align: center;
 }
+.student-emotions-container{
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 70em;
+  margin: auto;
+  text-align: center;
+}
+
+.student-sensations-container{
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 70em;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .student-bubbleposition{
   display: block;
   margin-left: 30em;
 
 }
+.student-landing-bubbleposition{
+  display: block;
+  margin-left: 20em;
+
+}
+
+.student-breathing-bubbleposition{
+  display: block;
+  margin-left: 25em;
+
+}
+.student-emotions-bubbleposition{
+  display: block;
+  margin-left: 32em;
+
+}
+
+.student-sensations-bubbleposition{
+  display: block;
+  margin-left: 30em;
+
+}
+
+
+
+
+
 .student-gif{
   pointer-events: none;
 }
@@ -328,7 +400,7 @@ body{
   border-radius: 15px;
   margin: auto;
   border: 4px solid black;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .student-btn:hover{
@@ -347,7 +419,7 @@ body{
   font-weight: bold;
   background: rgb(158, 141, 217);
   text-align: center;
-  color: rgb(2, 1, 1);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all .35s;
@@ -539,7 +611,7 @@ body{
 }
 .back-btn{
   margin-left: 20px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: auto;
   height: 50px;
   text-decoration: none;

@@ -35,9 +35,13 @@ function EmotionsView (){
     return (
         <div>
             <h1 className="student-text">Emotions</h1>
-            <img className="student-bubbleposition" src={emotionGif} width="430" alt="emotion-gif"/>
-
-            <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+            <div className="student-emotions-container">
+            <div>
+                <img className="student-emotions-bubbleposition" src={emotionGif} width="430" alt="emotion-gif"/>
+            </div>
+            <div>
+                <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+            </div>
             <h5 className="student-text">Your emotion: {chosenOne.emotion_name}</h5>
             <div className="emotion-container" >
                 {emotions.map((emotion) => {
@@ -48,6 +52,7 @@ function EmotionsView (){
                 <button className='back-btn' onClick={handleBack}>Back</button>  
                 <button className="student-btn" onClick={handleNext}>Next</button>
             </div> 
+            </div>
         </div>
     )
 

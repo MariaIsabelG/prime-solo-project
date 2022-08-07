@@ -20,7 +20,7 @@ function StudentLanding(){
         <div>
             <h1 className="student-text"> Welcome, {student.full_name}!</h1>
                 <div className="student-landing-container">
-                    <div className="student-bubbleposition">
+                    <div className="student-landing-bubbleposition">
                         <img  src={welcomeGif} width="430" alt="journey"/>
                     </div>
                     <div className="student-gif">

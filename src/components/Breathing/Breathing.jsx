@@ -24,10 +24,10 @@ function StudentLanding(){
             <h1 className="student-text">Breathing</h1>
             <div className="student-breathing-container">
                 <div>
-                    <img className="student-bubbleposition" width="330" src={breathingGif} alt="giraffe-gif"/>
+                    <img className="student-breathing-bubbleposition" width="330" src={breathingGif} alt="giraffe-gif"/>
                 </div>
                 <div className="student-gif">
-                    <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="400" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+                    <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="450" height="250" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
                 </div>
                 <h5 className="student-text">Click Next when you are done!</h5>
                 <div>
