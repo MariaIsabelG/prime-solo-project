@@ -22,10 +22,16 @@ function Thanks (){
 
     return (
         <div>
-        <h1 className="student-text">{user.full_name}</h1>
-        <img className="student-bubbleposition" src={thanksGif} width="500"alt="thanks-gif"/>
-        <center><iframe src="https://giphy.com/embed/osjgQPWRx3cac" width="300" height="300" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
-        <LogOutButton className="logout-btn" />
+            <h1 className="student-text">{user.full_name}</h1>
+            <div className="student-thanks-container">
+                <div>
+                    <img className="student-bubbleposition" src={thanksGif} width="450"alt="thanks-gif"/>
+                </div>
+                <div>
+                    <center><iframe src="https://giphy.com/embed/osjgQPWRx3cac" width="300" height="300" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+                </div>
+                <LogOutButton className="logout-btn" />
+            </div>
         </div>
     )
 };

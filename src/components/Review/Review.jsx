@@ -35,17 +35,21 @@ function Review (){
     console.log( 'This emotion and sensation data passed:', emotionInput, sensationInput)
     return (
         <div>
-        <h1 className="student-text">Review</h1>
-        <img className="student-bubbleposition" width="400" src={reviewGif} alt="review-gif"/>
-        <center><iframe src="https://giphy.com/embed/tZlrPHabl7C4kvMulU" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
-        <div className="review-container">
-            <h3>Emotion: {emotionInput.emotion_name} </h3>
-            <h3>Sensation: {sensationInput.sensation_name}</h3>
-            <div>
-            <button className='back-btn' onClick={handleBack}>Back</button>
-            <button className="student-btn" onClick={handleSubmit}>Submit</button>
+            <h1 className="student-text">Review</h1>
+            <div className="student-review-container">
+                <div>
+                    <img className="student-bubbleposition" width="400" src={reviewGif} alt="review-gif"/>
+                </div>
+                <div>
+                    <center><iframe src="https://giphy.com/embed/tZlrPHabl7C4kvMulU" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+                </div>
+                    <h3>Emotion: {emotionInput.emotion_name} </h3>
+                    <h3>Sensation: {sensationInput.sensation_name}</h3>
+                <div>
+                    <button className='back-btn' onClick={handleBack}>Back</button>
+                    <button className="student-btn" onClick={handleSubmit}>Submit</button>
+                </div>
             </div>
-        </div>
         </div>
     )
 };

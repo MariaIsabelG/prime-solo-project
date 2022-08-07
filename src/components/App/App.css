@@ -267,7 +267,7 @@ input {
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 60em;
+  width: 52em;
   margin: auto;
   text-align: center;
 }
@@ -308,6 +308,34 @@ input {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 70em;
+  margin: auto;
+  text-align: center;
+}
+
+.student-review-container{
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 70em;
+  margin: auto;
+  text-align: center;
+}
+
+.student-thanks-container{
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 60em;
   margin: auto;
   text-align: center;
 }
@@ -486,17 +514,6 @@ body{
 
 }
 
-.review-container{
-  border: 4px solid black;
-  height: 200px;
-  width: 40em;
-  text-align: center;
-  border-radius: 70px;
-  background-color: white;
-  margin: auto;
-  margin-top: 50px;
-
-}
 
 .logout-btn{
   display: block;
