@@ -35,7 +35,7 @@ function EmotionsView (){
 
             <center><iframe src="https://giphy.com/embed/nryBR3KOpEP2EsPqn6" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             <h5 className="student-text">Your emotion: {chosenOne.emotion_name}</h5>
-            <div className="emotion-container">
+            <div className="emotion-container" >
                 {emotions.map((emotion) => {
                     return <EmotionsViewItem key={emotion.id} emotion={emotion} />
                 })}
