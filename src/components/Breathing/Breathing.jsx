@@ -17,7 +17,7 @@ function StudentLanding(){
     return (
         <div>
             <h1 className="student-text">Breathing</h1>
-            <img className="student-bubbleposition" width="500" src={breathingGif} alt="giraffe-gif"/>
+            <img className="student-bubbleposition" width="330" src={breathingGif} alt="giraffe-gif"/>
             <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="400" height="230" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
             <h5 className="student-text">Click Next when you are done!</h5>
             <div>

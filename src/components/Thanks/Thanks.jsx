@@ -2,6 +2,7 @@ import LogOutButton from "../LogOutButton/LogOutButton";
 import { useHistory } from "react-router-dom";
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import thanksGif from '../Images/thanks.gif';
 
 
 function Thanks (){
@@ -21,9 +22,10 @@ function Thanks (){
 
     return (
         <div>
-        <h3> Thanks for sharing your emotion and sensation. </h3>
-        <h3>Keep doing the best you can!</h3>
-        <LogOutButton />
+        <h1 className="student-text">{user.full_name}</h1>
+        <img className="student-bubbleposition" src={thanksGif} width="500"alt="thanks-gif"/>
+        <center><iframe src="https://giphy.com/embed/osjgQPWRx3cac" width="300" height="300" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
+        <LogOutButton className="logout-btn" />
         </div>
     )
 };
