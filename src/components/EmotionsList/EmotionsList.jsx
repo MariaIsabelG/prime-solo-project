@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmotionsItem from '../EmotionsItem/EmotionsItem';
 import { useEffect } from 'react';
+import SensationsList from '../SensationsList/SensationsList';
 
 function EmotionsList (){
 
@@ -14,11 +15,14 @@ function EmotionsList (){
     },[])
 
     return (
-        <div className="teacher-emotion-container">
-            <h5>Emotions available:</h5>
+        <div className="teacher-state-container">
+        <div >
+            <h5>Emotions:</h5>
                 {emotions.map((emotion) => {
                     return <EmotionsItem key={emotion.id} emotion={emotion} />
                 })}
+        </div>
+        <SensationsList/>
         </div>
     )
 

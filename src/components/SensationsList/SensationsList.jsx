@@ -14,8 +14,8 @@ function SensationsList (){
     },[])
 
     return (
-        <div className="teacher-sensation-container">
-            <h5>Sensations available:</h5>
+        <div >
+            <h5>Sensations:</h5>
                 {sensations.map((sensation) => {
                     return <SensationsItem key={sensation.id} sensation={sensation} />
                 })}

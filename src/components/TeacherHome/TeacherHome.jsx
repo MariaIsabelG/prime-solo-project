@@ -21,7 +21,10 @@ function TeacherHome(){
         <StudentList/>
         <OverviewChart/>
         <EmotionsList/>
-        <SensationsList/>
+        
+       
+        {/* <SensationsList/> */}
+       
         
         </div>
 

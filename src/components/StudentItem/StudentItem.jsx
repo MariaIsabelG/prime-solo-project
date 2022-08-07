@@ -29,10 +29,10 @@ function StudentItem ({student}){
     return (
 
         <tr key={student.id}>
-            <td>{student.full_name}</td>
+            <td className="studentlist">{student.full_name}</td>
             <td>
-                <button className="student-list-btn" onClick={handleView}>View</button>
-                <button className="student-list-btn" onClick={handleEdit}>Edit</button>
+                <button className="student-list-view-btn" onClick={handleView}>View</button>
+                <button className="student-list-edit-btn" onClick={handleEdit}>Edit</button>
             </td>
         </tr>
     )
