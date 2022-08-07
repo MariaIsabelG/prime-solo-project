@@ -26,7 +26,7 @@ function LoginForm() {
 
   return (
     <form className="log-user-panel" onSubmit={login}>
-      <h2>Login</h2>
+      <h2>ReadMe Login</h2>
       {errors.loginMessage && (
         <h3 className="alert" role="alert">
           {errors.loginMessage}
