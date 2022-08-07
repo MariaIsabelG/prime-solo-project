@@ -22,10 +22,6 @@ function TeacherHome(){
         <OverviewChart/>
         <EmotionsList/>
         
-       
-        {/* <SensationsList/> */}
-       
-        
         </div>
 
       </div>

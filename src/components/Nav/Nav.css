@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  background-color: rgb(111, 128, 241);
+  background-color: #7d77ed;
   overflow: hidden;
+
 
 }
 
@@ -24,7 +24,7 @@
 .navLink {
   display: inline-block;
   color: #f2f2f2;
-  background-color: rgb(111, 128, 241);
+  background-color: #7d77ed;
   text-align: center;
   padding: 24px 10px;
   text-decoration: none;

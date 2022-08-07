@@ -34,13 +34,12 @@ function StudentChart (){
         }
 
     return (
-        <div>
-        <h1>Student Chart!</h1>
-        <p>{student.full_name}</p>
+        <>
+        <h5 className="student-text">Student Chart</h5>
             <div style={{width: '500px', margin: '0 auto'}}>
                 <Line data = {data}/>
             </div> 
-        </div>
+        </>
     )
 };
 

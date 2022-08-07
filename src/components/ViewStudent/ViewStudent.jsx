@@ -29,15 +29,17 @@ function ViewStudent(){
     return(
         <div>
             <Nav />
-        
-        <div>
-            <h4>Student Name:</h4><p>{student.full_name}</p>
-            <h4>Username:</h4><p> {student.username}</p>
-            <h4>Considerations:</h4><p>{student.considerations}</p>
+        <div className="view-student-container">
+            <h5>Student Name:</h5><p>{student.full_name}</p>
+            <h5>Username:</h5><p> {student.username}</p>
+            <h5>Considerations:</h5><p>{student.considerations}</p>
+       
+        <button className="student-list-edit-btn" onClick={handleEdit}>Edit</button>
+        <button className="student-list-home-btn" onClick={handleHome}>Home</button>
         </div>
-        <button onClick={handleEdit}>Edit</button>
-        <button onClick={handleHome}>Home</button>
+        <div className="student-chart-container">
         <StudentChart/>
+        </div>
         </div>
     )
 
