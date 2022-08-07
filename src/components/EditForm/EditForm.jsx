@@ -55,7 +55,7 @@ function EditForm() {
                         placeholder='Considerations'
                         value={student.considerations}
                         /></label><br/>
-                        <button className="student-list-update-btn" type='submit' value='Update Student'>Update</button>
+                        <button className="teacher-blue-btn" type='submit' value='Update Student'>Update</button>
                     </form>
                     <DeleteStudent id={student.id} />
                     </div>

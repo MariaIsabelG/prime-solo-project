@@ -4,7 +4,11 @@ body,
   height: 100%;
 }
 
+body{
+  font-family: 'Press Start 2P', cursive;
+  background-image: url(../Images/forest.jpg);
 
+}
 
 img {
   display: inline-block;
@@ -94,7 +98,7 @@ Alert
 Form Treatment
 -------------------------------------------------------------------------------- */
 
-.formPanel {
+.log-user-panel {
   box-sizing: border-box;
   width: 400px;
   max-width: 100%;
@@ -114,16 +118,110 @@ input {
   height: 30px;
   padding-left: 10px;
 }
-.add-student-container {
+/* --------------------------------------------------------------------------------
+Admin/Teacher containers
+-------------------------------------------------------------------------------- */
+.teacher-home-container{
+  display: grid;
+  grid-template-columns: 500px 700px;
+  grid-template-rows: auto;
+  justify-content: center;
+  grid-column-gap: 30px;
+  
+}
+
+.student-list-container {
+  border: 4px solid black;
+  height: auto;
+  width: 500px;
+  border-radius: 30px;
+  background-color: white;
+  padding-top: 17px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-size: 15px
+}
+
+.teacher-state-container{
+  border: 4px solid black;
+  height: auto;
+  width: 550px;
+  border-radius: 30px;
+  background-color: white;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  justify-content: center;
+
+}
+
+.overviewchart-container{
   border: 4px solid black;
   height: auto;
   width: auto;
   border-radius: 30px;
   background-color: white;
   text-align: center;
-  padding-bottom: 15px;
-  
+  padding-bottom: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 17px;
 }
+
+.view-student-container{
+  background-color: white;
+  width: 500px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: 4px solid black;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-left: 20px;
+
+}
+
+.student-chart-container{
+  background-color: white;
+  width: 600px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: 4px solid black;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 20px;
+
+}
+
+.edit-student-container{
+  background-color: white;
+  width: 600px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: 4px solid black;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+}
+
+.register{
+  background-color: white;
+  width: 600px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border: 4px solid black;
+  border-radius: 15px;
+  margin: auto;
+  text-align: left;
+
+}
+
+/* --------------------------------------------------------------------------------
+Admin/Teacher buttons
+-------------------------------------------------------------------------------- */
+
 .teacher-yellow-btn{
   display: block;
   width: auto;
@@ -149,17 +247,6 @@ input {
   color: black;
 }
 
-.student-list-container {
-  border: 4px solid black;
-  height: auto;
-  width: 500px;
-  border-radius: 30px;
-  background-color: white;
-  padding-top: 17px;
-  padding-left: 15px;
-  padding-bottom: 15px;
-  font-size: 15px
-}
 .teacher-blue-btn{
   margin-left: 20px;
   margin-top: 10px;
@@ -202,7 +289,7 @@ input {
   color: black;
 }
 
-.teacher-home-btn{
+.teacher-green-btn{
   margin-left: 20px;
   margin-top: 10px;
   width: auto;
@@ -217,46 +304,37 @@ input {
   border-radius: 10px;
   border: 4px solid black;
 }
-.teacher-home-btn:hover{
+.teacher-green-btn:hover{
   border: 3px solid 36d79a;
   background:rgb(173, 217, 141);
   color: black;
 }
-.teacher-state-container{
-  border: 4px solid black;
-  height: auto;
-  width: 550px;
-  border-radius: 30px;
-  background-color: white;
-  text-align: center;
-  padding-bottom: 15px;
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 300px 300px;
-  justify-content: center;
 
-}
-
-.overviewchart-container{
-  border: 4px solid black;
-  height: auto;
+.teacher-red-btn{
+  margin-left: 20px;
+  margin-top: 10px;
   width: auto;
-  border-radius: 30px;
-  background-color: white;
-  text-align: center;
-  padding-bottom: 60px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 17px;
+  height: 40px;
+  text-decoration: none;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  border-radius: 10px;
+  border: 4px solid black;
 }
-.teacher-home-container{
-  display: grid;
-  grid-template-columns: 500px 700px;
-  grid-template-rows: auto;
-  justify-content: center;
-  grid-column-gap: 30px;
-  
+
+.teacher-red-btn:hover{
+  border: 3px solid 36d79a;
+  background:rgb(235, 84, 84);
+  color: black;
 }
+
+/* --------------------------------------------------------------------------------
+User/Student containers
+-------------------------------------------------------------------------------- */
 
 .student-landing-container{
   display: block;
@@ -271,6 +349,7 @@ input {
   margin: auto;
   text-align: center;
 }
+
 .student-breathing-container{
   display: block;
   border-radius: 70px;
@@ -284,6 +363,7 @@ input {
   margin: auto;
   text-align: center;
 }
+
 .student-emotions-container{
   display: block;
   border-radius: 70px;
@@ -298,6 +378,15 @@ input {
   text-align: center;
 }
 
+.emotion-container{
+  display: grid;
+  grid-template-columns: 170px 170px 170px 170px 170px;
+  grid-row-gap: 30px;
+  grid-column-gap: 40px;
+  justify-content: center;
+
+}
+
 .student-sensations-container{
   display: block;
   border-radius: 70px;
@@ -310,6 +399,16 @@ input {
   width: 70em;
   margin: auto;
   text-align: center;
+}
+
+.sensation-container{
+  display: grid;
+  grid-template-columns: 170px 170px 170px 170px 170px;
+  /* grid-template-rows: 60px 60px; */
+  grid-row-gap: 30px;
+  grid-column-gap: 40px;
+  justify-content: center;
+
 }
 
 .student-review-container{
@@ -340,28 +439,10 @@ input {
   text-align: center;
 }
 
+/* --------------------------------------------------------------------------------
+User/Student positioning
+-------------------------------------------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.student-bubbleposition{
-  display: block;
-  margin-left: 30em;
-
-}
 .student-landing-bubbleposition{
   display: block;
   margin-left: 20em;
@@ -385,20 +466,23 @@ input {
 
 }
 
+.student-review-bubbleposition{
+  display: block;
+  margin-left: 33em;
 
+}
 
+.student-thanks-bubbleposition{
+  display: block;
+  margin-left: 30em;
 
+}
 
 .student-gif{
   pointer-events: none;
 }
 
-.welcome-teacherhome{
-  font-family: 'Press Start 2P', cursive;
-}
-
 .student-text{
-  font-family: 'Press Start 2P', cursive;
   text-align: center;
   margin: 2em;
   padding-left: 3em;
@@ -406,11 +490,11 @@ input {
   display: block;
   color:black;
 }
-body{
-  font-family: 'Press Start 2P', cursive;
-  background-image: url(../Images/forest.jpg);
 
-}
+/* --------------------------------------------------------------------------------
+User/Student buttons
+-------------------------------------------------------------------------------- */
+
 .student-btn{
   display: inline-block;
   width: 130px;
@@ -463,6 +547,7 @@ body{
   background: #f0f090;
   color: black;
 }
+
 .sensation-btn{
   height: 3.5em;
   width: 14em;
@@ -488,32 +573,6 @@ body{
   background: #f0f090;
   color: black;
 }
-.emotion-container{
-  display: grid;
-  grid-template-columns: 170px 170px 170px 170px 170px;
-  grid-row-gap: 30px;
-  grid-column-gap: 40px;
-  justify-content: center;
-  /* background-color: white;
-  width: auto;
-  margin:auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 15px;
-  border: 4px solid black; */
-
-}
-
-.sensation-container{
-  display: grid;
-  grid-template-columns: 170px 170px 170px 170px 170px;
-  /* grid-template-rows: 60px 60px; */
-  grid-row-gap: 30px;
-  grid-column-gap: 40px;
-  justify-content: center;
-
-}
-
 
 .logout-btn{
   display: block;
@@ -541,91 +600,8 @@ body{
   background: transparent;
   color: black;
 }
-.view-student-container{
-  background-color: white;
-  width: 500px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: 4px solid black;
-  border-radius: 15px;
-  margin-top: 50px;
-  margin-left: 20px;
 
-}
-.student-chart-container{
-  background-color: white;
-  width: 600px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: 4px solid black;
-  border-radius: 15px;
-  margin-top: 20px;
-  text-align: center;
-  margin-left: 20px;
 
-}
-.edit-student-container{
-  background-color: white;
-  width: 600px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: 4px solid black;
-  border-radius: 15px;
-  margin: auto;
-  text-align: center;
-}
-.student-list-update-btn{
-  margin-left: 20px;
-  margin-top: 10px;
-  width: auto;
-  height: 40px;
-  text-decoration: none;
-  background: black;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
-  border-radius: 10px;
-  border: 4px solid black;
-}
-.student-list-update-btn:hover{
-  border: 3px solid 36d79a;
-  background:rgb(158, 141, 217);
-  color: black;
-}
-.student-list-delete-btn{
-  margin-left: 20px;
-  margin-top: 10px;
-  width: auto;
-  height: 40px;
-  text-decoration: none;
-  background: black;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
-  border-radius: 10px;
-  border: 4px solid black;
-}
-.student-list-delete-btn:hover{
-  border: 3px solid 36d79a;
-  background:rgb(235, 84, 84);
-  color: black;
-}
-.register{
-
-  background-color: white;
-  width: 600px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  border: 4px solid black;
-  border-radius: 15px;
-  margin: auto;
-  text-align: left;
-
-}
 .back-btn{
   margin-left: 20px;
   /* margin-top: 30px; */
@@ -643,6 +619,7 @@ body{
   margin-right: 20px;
   text-align: center;
 }
+
 .back-btn:hover{
   border: 3px solid 36d79a;
   background:transparent;

@@ -38,7 +38,7 @@ function Review (){
             <h1 className="student-text">Review</h1>
             <div className="student-review-container">
                 <div>
-                    <img className="student-bubbleposition" width="400" src={reviewGif} alt="review-gif"/>
+                    <img className="student-review-bubbleposition" width="400" src={reviewGif} alt="review-gif"/>
                 </div>
                 <div>
                     <center><iframe src="https://giphy.com/embed/tZlrPHabl7C4kvMulU" width="150" height="150" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
