@@ -128,7 +128,8 @@ Admin/Teacher containers
   grid-template-rows: auto;
   justify-content: center;
   grid-column-gap: 30px;
-  
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .student-list-container {
