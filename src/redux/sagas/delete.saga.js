@@ -5,6 +5,7 @@ function* deleteStudent(action){
     try{
         console.log( 'this is my action payload in delete saga:', action.payload );
         yield axios.delete(`/api/students/delete/${action.payload}`);
+        yield put({ type: 'FETCH_STUDENTS'});
         
     }catch(error) {
         console.log('Error in deleting student:', error);

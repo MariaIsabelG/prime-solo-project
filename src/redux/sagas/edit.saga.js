@@ -4,7 +4,7 @@ import axios from 'axios';
 function* editStudent(action){
     try{
         yield axios.put(`/api/students/edit/${action.payload.id}`, action.payload);
-        yield put({ type: 'EDIT_CLEAR'});
+        yield put({ type: 'FETCH_STUDENTS'});
     }catch(error) {
         console.log('Error in getting students:', error);
   }
