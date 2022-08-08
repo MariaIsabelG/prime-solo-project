@@ -17,30 +17,21 @@ function OverviewChart(){
 
     },[])
     
-    const overview = useSelector( (store) => store.overview);
-    let studentName = overview.map((value)=> value.full_name);
-    console.log( 'This is overview data:', overview );
+    const responses = useSelector((store) => store.responses);
+    const names = responses.map((response) => response.name);
+    const emotions = responses.map((response) => response.evalue);
     
 
     
-    const data = { 
-        labels: [],
+    const chartdata = { 
+        labels: names,
         datasets: [{
             label: 'Emotions',
-            data: [],
+            data: emotions,
             backgroundColor: 'pink',
-            tension: .2,
             yAxisID: 'emotion',
             }
-            ,{
-            label: 'Sensation',
-            data: [],
-            backgroundColor: 'lightblue', 
-            tension: .2,   
-            yAxisID: 'physical',
-            }
-        ],
-            
+        ],    
         }
 
     return(
@@ -48,7 +39,7 @@ function OverviewChart(){
             
             <div className="overviewchart-container" style={{width: '550px', height:'auto', margin: '0 auto'}}>
             <h5>Overview Chart</h5>
-                <Bar data = {data}/>
+                <Bar data={chartdata}  />
             </div> 
         </div>
 

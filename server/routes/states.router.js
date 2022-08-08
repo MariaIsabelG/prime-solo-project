@@ -34,7 +34,12 @@ const router = express.Router();
 
   router.get('/overview', (req, res) => {
     // GET route code here  
-    const queryText = `SELECT full_name FROM "user" WHERE access_level = 2;`;
+    const queryText = `select "input"."created_at" AS "recent", "user"."full_name" AS "name", "emotion"."emotion_name" AS "emotion", "emotion"."emotion_value" AS "evalue", "sensation"."sensation_name" AS "sensation", "sensation"."sensation_value" AS "svalue"   
+    FROM "input"
+    JOIN "user" ON "user"."id" = "input"."user_id"
+    JOIN "emotion" ON "emotion"."id" = "input"."emotion_id" 
+    JOIN "sensation" ON "sensation"."id" = "input"."sensation_id"
+    WHERE input.created_at = (SELECT max(created_at) FROM input WHERE "user".id = input.user_id);`;
     pool.query( queryText )
     .then ( response =>{
       res.send( response.rows );
