@@ -74,9 +74,9 @@ function OverviewChart(){
 
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);
-    const studentSensations = responses.map((response) => response.svalue);
-    const emotionValues = evalues.map((evalue) => evalue.emotion_name); 
-    console.log( 'This is emotions:', evalues);
+    const studentSensations = responses.map((response) => response.svalue); 
+    const eName = evalues.map((evalue) => evalue.emotion_name);
+    console.log( 'This is emotions:', eName);
             
 
 
@@ -109,8 +109,16 @@ function OverviewChart(){
                                 beginAtZero: true,
                                 type: 'linear',
                                 position: 'right',
+                                grid: {
+                                    drawOnChartArea: false
+                                },
+                                ticks: {
+                                    callback: function (eValues){
+                                    return `${eValues.emotion_name}`;
+                                    }
+                                }
+                            }
                         }
-                    }
                     }}/>
             </div> 
         </div>
@@ -121,3 +129,5 @@ function OverviewChart(){
     };
 
 export default OverviewChart;
+
+// LEFT OFF---- right y axis shows undefined. Almost THERE!! 
