@@ -70,13 +70,15 @@ function OverviewChart(){
     const dispatch = useDispatch();
 
     const responses = useSelector((store) => store.responses);
-    const evalues = useSelector((store) => store.emotions);
+    const enames = useSelector((store) => store.emotions);
+    const snames = useSelector((store) => store.sensations);
 
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);
     const studentSensations = responses.map((response) => response.svalue); 
-    const eName = evalues.map((evalue) => evalue.emotion_name);
-    console.log( 'This is emotions:', eName);
+    const ename = enames.map((ename) => ename.emotion_name);
+    const sname = snames.map((sname) => sname.sensation_name);
+    console.log( 'This is emotions:', ename);
             
 
 
@@ -85,7 +87,7 @@ function OverviewChart(){
             
             <div className="overviewchart-container" style={{width: '550px', height:'auto', margin: '0 auto'}}>
             <h5>Overview Chart</h5>
-                <Bar data={{
+                <Bar width='1000em' height='1000em' data={{
                     labels: studentNames,
                     datasets: [{
                         label: 'Emotions',
@@ -99,11 +101,17 @@ function OverviewChart(){
                         yAxisID: 'sensation',
                         }]}}
                 options={{
+                    maintainAspectRatio: true,
                     scales: {
                         emotion: {
                             beginAtZero: true,
                             type: 'linear',
                             position: 'left',
+                            ticks: {
+                                callback: function (){
+                                return sname;
+                                }
+                            }
                         },
                         sensation: {
                                 beginAtZero: true,
@@ -113,8 +121,8 @@ function OverviewChart(){
                                     drawOnChartArea: false
                                 },
                                 ticks: {
-                                    callback: function (eValues){
-                                    return `${eValues.emotion_name}`;
+                                    callback: function (){
+                                    return ename;
                                     }
                                 }
                             }
