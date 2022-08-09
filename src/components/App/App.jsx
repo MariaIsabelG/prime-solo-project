@@ -12,7 +12,6 @@ import Footer from '../Footer/Footer';
 import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
 import ProtectedRouteUser from '../ProtectedRoute/ProtectedRouteUser';
 import AboutPage from '../AboutPage/AboutPage';
-//import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';

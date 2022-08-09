@@ -70,17 +70,10 @@ function OverviewChart(){
     const dispatch = useDispatch();
 
     const responses = useSelector((store) => store.responses);
-    const enames = useSelector((store) => store.emotions);
-    const snames = useSelector((store) => store.sensations);
 
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);
     const studentSensations = responses.map((response) => response.svalue); 
-    const ename = enames.map((ename, index) => ename.emotion_name);
-    const sname = snames.map((sname) => sname.sensation_name);
-    console.log( 'This is emotions:', [ename]);
-            
-
 
     return(
         <div>
@@ -92,16 +85,25 @@ function OverviewChart(){
                     datasets: [{
                         label: 'Emotions',
                         data: studentEmotions,
-                        backgroundColor: 'pink',
+                        backgroundColor: 'rgb(219, 105, 231)',
                         yAxisID: 'emotion',
                         }, {
                         label: 'Sensations',
                         data: studentSensations,
-                        backgroundColor: 'lightblue',
+                        backgroundColor: 'rgb(81, 103, 231)',
                         yAxisID: 'sensation',
                         }]}}
                 options={{
                     maintainAspectRatio: true,
+                    plugins: {
+                        legend:{
+                            labels:{
+                                font:{
+                                    size: '16px',
+                                    weight: 'bold',
+                                }
+                            }
+                        }},
                     scales: {
                         emotion: {
                             beginAtZero: true,
@@ -110,6 +112,10 @@ function OverviewChart(){
                             min: 0,
                             max: 15,
                             ticks: {
+                                font:{
+                                    size: '16px',
+                                },
+                                color: 'rgb(219, 105, 231)',
                                 stepSize: 1,
                                 callback: function (value){
                                     if( value == 1 ){
@@ -158,6 +164,10 @@ function OverviewChart(){
                                 },
                                 ticks: {
                                     stepSize: 1,
+                                    color: 'rgb(81, 103, 231)',
+                                    font: {
+                                            size: '16px',
+                                        },
                                     callback: function (value){
                                         if( value == 1 ){
                                             return 'Relaxed';
