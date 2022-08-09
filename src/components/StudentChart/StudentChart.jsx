@@ -74,14 +74,14 @@ function StudentChart (){
 
             const studentdata = useSelector((store) => store.studentdata);
             
-            const timestamps = studentdata.map((timestamp) => timestamp.created_at);
+            const timestamps = studentdata.map((timestamp) => timestamp.to_char);
             const evalues = studentdata.map((evalue) => evalue.emotion_value);
             const svalues = studentdata.map((svalue) => svalue.sensation_value);
 
     return (
         <>
         <h5 className="student-text">Student Chart</h5>
-            <div style={{width: '500px', margin: '0 auto'}}>
+        <div className="student-line-chart-container">
             <Line width='1000em' height='1000em' data={{
                     labels: timestamps,
                     datasets: [{
@@ -210,11 +210,10 @@ function StudentChart (){
                                             }
                                         }
                                     }
-                                }
+                                },
+                                // maintainAspectRatio: false,
                             }}/>
-                        
-                
-            </div> 
+            </div>
         </>
     )
 };

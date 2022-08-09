@@ -52,7 +52,7 @@ const router = express.Router();
 
   router.get('/student/:id', (req, res) => { 
     const id = req.params.id;
-    const queryText = `SELECT "created_at", "user_id", "emotion_value", "sensation_value", "full_name" FROM input 
+    const queryText = `SELECT TO_CHAR("created_at", 'MON-DD-YY HH12:MI'), "user_id", "emotion_value", "sensation_value", "full_name" FROM input 
     JOIN "user" ON "user"."id" = "input"."user_id"
     JOIN "emotion" ON "emotion"."id" = "input"."emotion_id" 
     JOIN "sensation" ON "sensation"."id" = "input"."sensation_id"

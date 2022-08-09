@@ -29,6 +29,7 @@ function ViewStudent(){
     return(
         <div>
             <Nav />
+        <div className="individual-student-container">   
         <div className="view-student-container">
             <h5>Student Name:</h5><p>{student.full_name}</p>
             <h5>Username:</h5><p> {student.username}</p>
@@ -40,7 +41,9 @@ function ViewStudent(){
         <div className="student-chart-container">
         <StudentChart/>
         </div>
+        </div> 
         </div>
+
     )
 
 };
