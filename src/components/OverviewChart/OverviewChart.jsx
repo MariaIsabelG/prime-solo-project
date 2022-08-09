@@ -69,7 +69,7 @@ function OverviewChart(){
 
     const dispatch = useDispatch();
 
-    const responses = useSelector((store) => store.responses);
+    const responses = useSelector((store) => store.overview);
 
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);

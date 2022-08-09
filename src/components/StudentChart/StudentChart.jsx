@@ -8,9 +8,17 @@ import { useEffect } from 'react';
 function StudentChart (){
 
     const student = useSelector( (store) => store.edit);
-    const emotions = useSelector( (store) => store.emotions);
 
-    console.log('The emotions:', emotions)
+
+    console.log('This is my selected student:', student);
+
+        useEffect(() => {
+            
+            dispatch({
+                type: 'GET_STUDENT_DATA',
+            })
+    
+            },[])
 
 
     const data = { 
@@ -41,7 +49,8 @@ function StudentChart (){
             </div> 
         </>
     )
-};
+}
+;
 
 export default StudentChart;
 
