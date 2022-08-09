@@ -5,6 +5,7 @@ function* StudentData (action){
     try{
         const response = yield axios.get(`/api/states/student/${action.payload}`);
         yield put({ type: 'SET_STUDENT_DATA', payload: response.data });
+        console.log('This is my studentdata:', response.data);
 
     }catch(error) {
         console.log('Error in getting students:', error);

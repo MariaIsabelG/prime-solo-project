@@ -51,12 +51,13 @@ const router = express.Router();
   });
 
   router.get('/student/:id', (req, res) => { 
+    const id = req.params.id;
     const queryText = `SELECT "created_at", "user_id", "emotion_value", "sensation_value", "full_name" FROM input 
     JOIN "user" ON "user"."id" = "input"."user_id"
     JOIN "emotion" ON "emotion"."id" = "input"."emotion_id" 
     JOIN "sensation" ON "sensation"."id" = "input"."sensation_id"
-    WHERE "user_id" = 34;`;
-    pool.query( queryText )
+    WHERE "user_id" = $1;`;
+    pool.query( queryText, [id] )
     .then ( response =>{
       res.send( response.rows );
       console.log( response.rows ); 
