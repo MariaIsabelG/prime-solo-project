@@ -211,7 +211,6 @@ function StudentChart (){
                                         }
                                     }
                                 },
-                                // maintainAspectRatio: false,
                             }}/>
             </div>
         </>
