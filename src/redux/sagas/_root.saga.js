@@ -9,6 +9,7 @@ import editSaga from './edit.saga';
 import deleteSaga from './delete.saga';
 import submitSaga from './submit.saga';
 import overviewSaga from './overview.saga';
+import studentdataSaga from './studentdata.saga';
 
 
 // rootSaga is the primary saga.
@@ -30,5 +31,6 @@ export default function* rootSaga() {
     deleteSaga(),
     submitSaga(),
     overviewSaga(),
+    studentdataSaga(),
   ]);
 }

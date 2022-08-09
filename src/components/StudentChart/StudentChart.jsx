@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 function StudentChart (){
 
     const student = useSelector( (store) => store.edit);
+    const dispatch = useDispatch();
 
 
     console.log('This is my selected student:', student);
@@ -16,6 +17,7 @@ function StudentChart (){
             
             dispatch({
                 type: 'GET_STUDENT_DATA',
+                payload: student.id,
             })
     
             },[])
