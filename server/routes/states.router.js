@@ -21,7 +21,7 @@ const router = express.Router();
 
   router.get('/sensations', (req, res) => {
     // GET route code here  
-    const queryText = `SELECT * FROM "sensation ORDER BY id ASC";`;
+    const queryText = `SELECT * FROM "sensation" ORDER BY id ASC;`;
     pool.query( queryText )
     .then ( response =>{
       res.send( response.rows );
