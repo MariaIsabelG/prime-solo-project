@@ -70,10 +70,14 @@ function OverviewChart(){
     const dispatch = useDispatch();
 
     const responses = useSelector((store) => store.overview);
+    const evalues = useSelector((store) => store.emotions);
 
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);
     const studentSensations = responses.map((response) => response.svalue); 
+ 
+
+    console.log( 'These are my emotions:', evalues );
 
     return(
     
@@ -149,7 +153,6 @@ function OverviewChart(){
                                     }if (value == 15 ){
                                         return 'Sad';
                                     }
-                                return value;
                                 }
                             }
                         },
@@ -200,8 +203,6 @@ function OverviewChart(){
                                         }if (value == 15 ){
                                             return 'Pain';
                                         }
-
-                                        return value;
                                     }
                                 }
                             }
