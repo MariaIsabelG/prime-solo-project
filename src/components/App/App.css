@@ -130,6 +130,11 @@ Admin/Teacher containers
   grid-column-gap: 30px;
   flex-wrap: wrap;
   display: flex;
+  
+}
+
+.big-container{
+  margin-bottom: 30px;
 }
 
 .student-list-container {
@@ -143,6 +148,7 @@ Admin/Teacher containers
   padding-right: 15px;
   padding-bottom: 15px;
   font-size: 15px;
+  margin-bottom: 30px;;
   
 }
 
@@ -157,7 +163,7 @@ Admin/Teacher containers
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 17px;
-  
+
 }
 
 .teacher-state-container{
@@ -168,7 +174,6 @@ Admin/Teacher containers
   background-color: white;
   text-align: center;
   padding-bottom: 15px;
-  margin-top: 30px;
   display: grid;
   grid-template-columns: 300px 300px;
   justify-content: center;

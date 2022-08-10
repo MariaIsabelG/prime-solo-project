@@ -76,8 +76,8 @@ function OverviewChart(){
     const studentSensations = responses.map((response) => response.svalue); 
 
     return(
-        <div>
-            
+    
+        <div className="big-container">    
             <div className="overviewchart-container" style={{width: '550px', height:'auto', margin: '0 auto'}}>
             <h5>Overview Chart</h5>
                 <Bar width='1000em' height='1000em' data={{
@@ -207,11 +207,8 @@ function OverviewChart(){
                             }
                         }
                     }}/>
-            </div> 
-        </div>
-
-        
-
+            </div>
+        </div>     
     )
     };
 
