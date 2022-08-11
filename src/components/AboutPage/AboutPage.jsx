@@ -17,8 +17,7 @@ function AboutPage() {
           <p>Liz Kerber</p>
           <p>Michael Essenburg</p>
           <p>Luis De La Espriella</p>
-          <p>Gonzalez Family</p>
-          <p>Gaiman Cohort</p>      
+          <p>Gonzalez Family</p>      
         </div>
       </div>
     </div>
