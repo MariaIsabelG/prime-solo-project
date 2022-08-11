@@ -29,7 +29,7 @@ import {
     Tooltip,
     SubTitle
   } from 'chart.js';
-  
+
   Chart.register(
     ArcElement,
     LineElement,
@@ -75,7 +75,6 @@ function OverviewChart(){
     const studentNames = responses.map((response) => response.name);
     const studentEmotions = responses.map((response) => response.evalue);
     const studentSensations = responses.map((response) => response.svalue); 
- 
 
     console.log( 'These are my emotions:', evalues );
 

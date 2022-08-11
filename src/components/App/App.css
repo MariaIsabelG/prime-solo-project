@@ -16,14 +16,6 @@ img {
 }
 
 /* --------------------------------------------------------------------------------
-Container
--------------------------------------------------------------------------------- */
-
-.container {
-  padding: 20px;
-}
-
-/* --------------------------------------------------------------------------------
 Button
 -------------------------------------------------------------------------------- */
 
@@ -667,3 +659,58 @@ User/Student buttons
   
 }
 
+/* --------------------------------------------------------------------------------
+About 
+-------------------------------------------------------------------------------- */
+.techused-container{
+  
+    display: block;
+    border-radius: 70px;
+    border: 15px solid #14acf3;
+    border-style: double ;
+    background-color: white;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 20em;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 25px;
+
+  }
+
+.sources-container{
+
+    display: block;
+    border-radius: 70px;
+    border: 15px solid #14acf3;
+    border-style: double ;
+    background-color: white;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 60em;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 25px;
+
+}
+
+.challenges-container{
+
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 60em;
+  margin: auto;
+  text-align: center;
+  line-height: 25px;
+
+}
