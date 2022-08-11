@@ -10,33 +10,19 @@ function AboutPage() {
   return (
     <div>
       <Nav />
-      <div className="student-text">
-      <div className="techused-container">
-        <h5>Technologies used:</h5>
-        <p>React</p>
-        <p>Redux</p>
-        <p>Redux Saga</p>
-        <p>Node Js</p>
-        <p>Express</p>
-        <p>CSS</p>
-        <p>Axios</p>
-        <p>SQL</p>
-        <p>Chart Js</p>
-      </div>
-      <div className="sources-container">
-        <h5>Sources:</h5>
-        <p>Background: https://www.behance.net/FezEscalante</p>
-        <p>Pixel bubbles: https://pixelspeechbubble.com/</p>
-      </div>
-      <div className="challenges-container">
-        <h5>Biggest challenge:</h5>
-        <p>Figuring out how to implement data into Chart Js </p>
-        <h5>Next steps:</h5>
-        <p>Adding add emotions and add sensations buttons that will reflect both in the student view and the charts</p>
-      </div>
+      <div className="thanks-container">
+        <div className="student-text">
+          <h5>Thanks:</h5>
+          <p>Jemisin Cohort</p>
+          <p>Liz Kerber</p>
+          <p>Michael Essenburg</p>
+          <p>Luis De La Espriella</p>
+          <p>Gonzalez Family</p>
+          <p>Gaiman Cohort</p>      
+        </div>
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default AboutPage;
