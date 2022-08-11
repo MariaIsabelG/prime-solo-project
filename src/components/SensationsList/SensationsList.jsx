@@ -15,7 +15,7 @@ function SensationsList (){
 
     return (
         <div >
-            <h5>Sensations:</h5>
+            <h5 className="underlined-text">Sensations:</h5>
                 {sensations.map((sensation) => {
                     return <SensationsItem key={sensation.id} sensation={sensation} />
                 })}

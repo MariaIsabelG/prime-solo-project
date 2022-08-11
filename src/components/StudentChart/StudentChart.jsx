@@ -80,9 +80,10 @@ function StudentChart (){
 
     return (
         <>
-        <h5 className="student-text">Student Chart</h5>
-        <div className="student-line-chart-container">
-            <Line width='1000em' height='1000em' data={{
+        <h5 className="underlined-text">Student Chart</h5>
+        <div className="student-chart-big-container">
+        <div className="student-line-chart-container" style={{width:'auto', height:'600px'}}>
+            <Line  width="600px" height="900px" data={{
                     labels: timestamps,
                     datasets: [{
                         label: 'Emotions',
@@ -99,7 +100,7 @@ function StudentChart (){
                         tension: '.2',
                         yAxisID: 'sensation',
                         }]}} options={{
-                            maintainAspectRatio: true,
+                            maintainAspectRatio: false,
                             plugins: {
                                 legend:{
                                     labels:{
@@ -212,6 +213,7 @@ function StudentChart (){
                                     }
                                 },
                             }}/>
+            </div>
             </div>
         </>
     )

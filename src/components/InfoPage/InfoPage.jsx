@@ -11,7 +11,7 @@ function InfoPage() {
     <div >
       <Nav />
       <div className="techused-container">
-        <h5>Technologies used:</h5>
+        <h5 className="underlined-text">Technologies used:</h5>
         <p>React</p>
         <p>Redux</p>
         <p>Redux Saga</p>
@@ -23,12 +23,12 @@ function InfoPage() {
         <p>Chart Js</p>
       </div>
       <div className="sources-container">
-        <h5>Sources:</h5>
+        <h5 className="underlined-text">Sources:</h5>
         <p>Background: https://www.behance.net/FezEscalante</p>
         <p>Pixel bubbles: https://pixelspeechbubble.com/</p>
       </div>
       <div className="challenges-container">
-        <h5>Biggest challenge:</h5>
+        <h5 className="underlined-text">Biggest challenge:</h5>
         <p>Figuring out how to implement data into Chart Js </p>
         <h5>Next steps:</h5>
         <p>Adding add emotions and add sensations buttons that will reflect both in the student view and the charts</p>

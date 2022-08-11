@@ -31,12 +31,13 @@ function ViewStudent(){
             <Nav />
         <div className="individual-student-container">   
         <div className="view-student-container">
-            <h5>Student Name:</h5><p>{student.full_name}</p>
-            <h5>Username:</h5><p> {student.username}</p>
-            <h5>Considerations:</h5><p>{student.considerations}</p>
-       
+            <h5 className="underlined-text">Student Name:</h5><p className="student-text">{student.full_name}</p>
+            <h5 className="underlined-text">Username:</h5><p className="student-text"> {student.username}</p>
+            <h5 className="underlined-text">Considerations:</h5><p className="student-text">{student.considerations}</p>
+        <div className="student-text">
         <button className="teacher-blue-btn" onClick={handleEdit}>Edit</button>
         <button className="teacher-green-btn" onClick={handleHome}>Home</button>
+        </div>
         </div>
         <div className="student-chart-container">
         <StudentChart/>

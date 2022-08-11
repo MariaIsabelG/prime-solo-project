@@ -17,7 +17,7 @@ function EmotionsList (){
     return (
         <div className="teacher-state-container">
         <div >
-            <h5>Emotions:</h5>
+            <h5 className="underlined-text">Emotions:</h5>
                 {emotions.map((emotion) => {
                     return <EmotionsItem key={emotion.id} emotion={emotion} />
                 })}

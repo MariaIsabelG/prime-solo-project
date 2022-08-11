@@ -3,7 +3,7 @@ import Nav from '../Nav/Nav';
 
 
 function AboutPage() {
-  
+
   return (
     <div>
       {/* calling Navigation bar */}
@@ -11,7 +11,7 @@ function AboutPage() {
       {/* container for css */}
       <div className="thanks-container"> 
         <div className="student-text">
-          <h5>Thanks:</h5>
+          <h5 className="underlined-text">Thanks:</h5>
           <p>Jemisin Cohort</p>
           <p>Liz Kerber</p>
           <p>Michael Essenburg</p>

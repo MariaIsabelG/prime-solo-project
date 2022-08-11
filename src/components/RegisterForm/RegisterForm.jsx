@@ -33,7 +33,7 @@ function RegisterForm() {
 
   return (
     <form className="register" onSubmit={registerUser}>
-      <h2>Register User</h2>
+      <h5 className="underlined-text">Register User</h5>
       {errors.registrationMessage && (
         <h3 className="alert" role="alert">
           {errors.registrationMessage}

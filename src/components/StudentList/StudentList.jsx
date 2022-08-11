@@ -22,8 +22,8 @@ function StudentList (){
             <table>
                 <thead>
                     <tr>
-                        <th><h5>Your Students</h5></th>
-                        <th><h5>Actions</h5></th>
+                        <th><h5 className="underlined-text">Your Students</h5></th>
+                        <th><h5 className="underlined-text">Actions</h5></th>
                     </tr>
                 </thead>
                 <tbody>

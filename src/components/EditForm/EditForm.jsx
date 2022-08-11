@@ -36,7 +36,7 @@ function EditForm() {
                 <>
                 <Nav/>
                 <div className='edit-student-container'>
-                    <h5>Edit Student</h5>
+                    <h5 className="underlined-text">Edit Student</h5>
                     <form onSubmit={handleSubmit}>
                         <label>Student Name:
                         <input
