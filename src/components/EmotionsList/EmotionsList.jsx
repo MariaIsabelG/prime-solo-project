@@ -6,6 +6,7 @@ import SensationsList from '../SensationsList/SensationsList';
 function EmotionsList (){
 
     const dispatch = useDispatch();
+    // calling the store with all the emotions
     const emotions = useSelector( store => store.emotions);
 
     useEffect(() => { 
@@ -16,7 +17,8 @@ function EmotionsList (){
 
     return (
         <div className="teacher-state-container">
-        <div >
+        <div>
+            {/* Renders all emotions in the database */}
             <h5 className="underlined-text">Emotions:</h5>
                 {emotions.map((emotion) => {
                     return <EmotionsItem key={emotion.id} emotion={emotion} />

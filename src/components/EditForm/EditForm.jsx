@@ -37,6 +37,7 @@ function EditForm() {
                 <Nav/>
                 <div className='edit-student-container'>
                     <h5 className="underlined-text">Edit Student</h5>
+                    {/* Form to handle the update of chosen student */}
                     <form onSubmit={handleSubmit}>
                         <label>Student Name:
                         <input
@@ -56,6 +57,7 @@ function EditForm() {
                         placeholder='Considerations'
                         value={student.considerations}
                         /></label><br/>
+                        {/* On click it updates student data in DB */}
                         <button className="teacher-blue-btn" type='submit' value='Update Student'>Update</button>
                     </form>
                     <DeleteStudent id={student.id} />

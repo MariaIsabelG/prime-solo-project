@@ -26,7 +26,9 @@ function DeleteStudent ({id}){
 
     return (
         <div>
+            {/* renders a delete button that deletes the student */}
             <button className="teacher-red-btn" onClick={handleDelete}>Delete Student</button>
+            {/* renders a button that takes the teacher back to teacher home */}
             <button className="teacher-green-btn" onClick={handleCancel}>Cancel</button>
         </div>
     )

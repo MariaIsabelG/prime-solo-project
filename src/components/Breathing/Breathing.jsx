@@ -23,13 +23,16 @@ function StudentLanding(){
             <h1 className="student-text">Breathing</h1>
             <div className="student-breathing-container">
                 <div>
+                    {/* renders the text bubble*/}
                     <img className="student-breathing-bubbleposition" width="330" src={breathingGif} alt="giraffe-gif"/>
                 </div>
                 <div className="student-gif">
+                    {/* renders the giraffe gif */}
                     <center><iframe src="https://giphy.com/embed/IbOcZwrkzTTyLtnRUs" width="450" height="250" frameBorder="0" className="student-gif" allowFullScreen></iframe></center>
                 </div>
                 <h5 className="student-text">Click Next when you are done!</h5>
                 <div>
+                    {/* renders a back button and a next button */}
                     <button className="back-btn" onClick={handleBack}>Back</button>
                     <button className="student-btn" onClick={handleNext}>Next</button>
                 </div>
