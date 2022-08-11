@@ -26,36 +26,34 @@ import Thanks from '../Thanks/Thanks';
 import ViewStudent from '../ViewStudent/ViewStudent';
 
 function App() {
+  
   const dispatch = useDispatch();
 
+  // get the user info from user store
   const user = useSelector(store => store.user);
-  console.log( 'This is a user:', user)
 
   useEffect(() => {
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
 
   return (
+
     <Router>
-      <div>
-        
+      <div>  
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/login */}
           <Redirect exact from="/" to="/login" />
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
-            // shows AboutPage at all times (logged in or not)
+            // shows the about page at all times (logged in or not)
             exact
             path="/about"
           >
             <AboutPage />
           </Route>
 
-          {/* For protected routes, the view could show one of several things on the same route.
-            Visiting localhost:3000/ will show the UserPage if the user is logged in.
-            If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
-            Even though it seems like they are different pages, the user is always on localhost:3000/user */}
+          {/* Protected routes for admins */}
           <ProtectedRouteAdmin
             // logged in shows TeacherHome page else shows LoginPage
             exact
@@ -96,6 +94,7 @@ function App() {
             <ViewStudent />
           </ProtectedRouteAdmin>
 
+           {/* Protected routes for users */}
           <ProtectedRouteUser
             // logged in shows StudentLanding page else shows LoginPage
             exact
@@ -126,7 +125,6 @@ function App() {
             path="/sensations"
           >
             <SensationsView />
-
           </ProtectedRouteUser>
 
           <ProtectedRouteUser
@@ -146,20 +144,20 @@ function App() {
           </ProtectedRouteUser>
           
 
-<Route
-    exact
-    path="/login"
->
-    {user.access_level === 1 &&
+          <Route
+            exact
+            path="/login"
+          >
+            {/* Redirects admins to admin homepage */}
+            {user.access_level === 1 &&
             <Redirect to="/teacherhome" />}
 
-    {user.access_level === 2 &&
+            {/* Redirects users to user homepage */}
+            {user.access_level === 2 &&
             <Redirect to="/studentlanding" />}
 
             <LoginPage />
-</Route>
-
-
+          </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
@@ -169,8 +167,8 @@ function App() {
         <Footer />
       </div>
     </Router>
-  );
-}
+  )
+};
 
 export default App;
 
