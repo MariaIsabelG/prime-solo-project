@@ -207,6 +207,11 @@ function OverviewChart(){
                             }
                         }
                     }}/>
+                    <div className="key-container">
+                        <h5>Key:</h5>
+                        <h6>Emotions from cooler states to hotter states</h6>
+                        <h6>Sensations from healthy states to unhealthy states</h6>
+                    </div>
             </div>
         </div>     
     )
