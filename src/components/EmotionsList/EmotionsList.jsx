@@ -25,7 +25,6 @@ function EmotionsList (){
         <SensationsList/>
         </div>
     )
-
 };
 
 export default EmotionsList;

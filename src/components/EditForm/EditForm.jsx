@@ -12,6 +12,7 @@ function EditForm() {
 
     function handleChange(event, property) {
 
+        // sends every change to any input in this component into a redux edit store
         dispatch({
             type: 'EDIT_ONCHANGE',
             payload: {property: property, value: event.target.value}
@@ -19,12 +20,14 @@ function EditForm() {
     }
 
     function handleSubmit(event) {
-        event.preventDefault();
 
+        event.preventDefault();
+        // send updated data to a saga 
         dispatch({ 
             type: 'EDIT_STUDENT',
             payload: student
     })
+        // view push to teacher home after clicking update
         history.push('/teacherhome');
     };
 

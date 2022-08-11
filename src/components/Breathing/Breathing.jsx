@@ -1,25 +1,24 @@
-import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import breathingGif from '../Images/breathing.gif';
 
-
 function StudentLanding(){
 
-    const student = useSelector( store => store.user)
     const history = useHistory();
 
+    // view push to emotions page
     function handleNext() {
 
         history.push('/emotions')
     };
 
+    // view push back to student landing page
     function handleBack() {
 
         history.push('/studentlanding')
     };
 
-
     return (
+
         <div>
             <h1 className="student-text">Breathing</h1>
             <div className="student-breathing-container">
@@ -37,7 +36,6 @@ function StudentLanding(){
             </div>
         </div>
     )
-
 };
 
 export default StudentLanding;
