@@ -27,6 +27,7 @@ function InfoPage() {
         <p>Figuring out how to implement data into Chart Js </p>
         <h5>Next steps:</h5>
         <p>Adding add emotions and add sensations buttons that will reflect both in the student view and the charts</p>
+        <p>Making the app more accessible in terms of design and usability</p>
       </div>
     </div>
   );
