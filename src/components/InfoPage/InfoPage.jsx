@@ -31,7 +31,7 @@ function InfoPage() {
         <li>Making the app more accessible in terms of design and usability</li>
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default InfoPage;
