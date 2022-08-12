@@ -735,6 +735,22 @@ About
   margin-top: 50px;
 }
 
+.connect-container{
+  display: block;
+  border-radius: 70px;
+  border: 15px solid #14acf3;
+  border-style: double ;
+  background-color: white;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 50px;
+}
+
 /* --------------------------------------------------------------------------------
 Other 
 -------------------------------------------------------------------------------- */

@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
+import Headshot from '../Images/Headshot.jpg';
 
 
 function AboutPage() {
@@ -18,6 +19,14 @@ function AboutPage() {
           <p>Michael Essenburg</p>
           <p>Luis De La Espriella</p>
           <p>Gonzalez Family</p>      
+        </div>
+      </div>
+      <div className="connect-container"> 
+        <div className="student-text">
+          <h5 className="underlined-text">Connect:</h5>
+          <p>www.linkedin.com/in/mariaisabelg</p>
+          <p>https://github.com/MariaIsabelG</p>
+          <img width="195px" height="300px" src={Headshot} />
         </div>
       </div>
     </div>
