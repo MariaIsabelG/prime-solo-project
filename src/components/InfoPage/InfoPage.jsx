@@ -16,6 +16,7 @@ function InfoPage() {
         <p>Axios</p>
         <p>SQL</p>
         <p>Chart Js</p>
+        <p>Google Fonts</p>
       </div>
       <div className="sources-container">
         <h5 className="underlined-text">Sources:</h5>
