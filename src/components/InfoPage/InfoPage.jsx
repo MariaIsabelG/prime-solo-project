@@ -24,10 +24,11 @@ function InfoPage() {
       </div>
       <div className="challenges-container">
         <h5 className="underlined-text">Biggest challenge:</h5>
-        <p>Figuring out how to implement data into Chart Js </p>
-        <h5>Next steps:</h5>
-        <p>Adding add emotions and add sensations buttons that will reflect both in the student view and the charts</p>
-        <p>Making the app more accessible in terms of design and usability</p>
+          <li>Learning how Chart Js receives and handles data</li>
+          <li>Creating two Y axis on the charts</li>
+        <h5 className="underlined-text">Next steps:</h5>
+        <li>Teachers are able to add emotions and sensations to the app</li>
+        <li>Making the app more accessible in terms of design and usability</li>
       </div>
     </div>
   );

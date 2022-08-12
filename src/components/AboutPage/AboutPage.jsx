@@ -14,6 +14,7 @@ function AboutPage() {
           <h5 className="underlined-text">Thanks:</h5>
           <p>Jemisin Cohort</p>
           <p>Liz Kerber</p>
+          <p>Prime Digital Academy</p>
           <p>Michael Essenburg</p>
           <p>Luis De La Espriella</p>
           <p>Gonzalez Family</p>      
