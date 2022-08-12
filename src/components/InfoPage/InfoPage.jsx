@@ -10,7 +10,7 @@ function InfoPage() {
         <p>React</p>
         <p>Redux</p>
         <p>Redux Saga</p>
-        <p>Node Js</p>
+        <p>Node</p>
         <p>Express</p>
         <p>CSS</p>
         <p>Axios</p>
