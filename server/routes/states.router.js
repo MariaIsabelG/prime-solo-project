@@ -56,7 +56,7 @@ const router = express.Router();
     JOIN "user" ON "user"."id" = "input"."user_id"
     JOIN "emotion" ON "emotion"."id" = "input"."emotion_id" 
     JOIN "sensation" ON "sensation"."id" = "input"."sensation_id"
-    WHERE "user_id" = $1;`;
+    WHERE "user_id" = $1 ORDER BY "created_at" ASC;`;
     pool.query( queryText, [id] )
     .then ( response =>{
       res.send( response.rows );
